@@ -1,0 +1,210 @@
+/*Font assign*/
+@font-face{
+    font-family: Yekan;
+    src: url(Yekan.woff);
+}
+
+/*Whole page*/
+*{
+    font-family: Yekan;
+    font-style : normal ;
+	font-weight : normal ;
+    box-sizing : border-box ;
+}
+
+/*Body of the page*/
+body{
+    background-color: #f8f9fd;
+}
+
+/*Layout container*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 650px 600px 500px 400px 400px 200px 800px;
+}
+
+
+
+/*Navigation bar*/
+.navbar{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: row;
+}
+/*Darmanito logo*/
+.navbar_darmanito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: 100px;
+    width: 20%;
+}
+.navbar_darmanito > a{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.navbar_darmanito > div{
+    display: flex;
+    flex-direction: column;
+}
+.navbar_darmanito h3{
+    font-size: 18px;
+}
+.navbar_darmanito p{
+    font-size: 12px;
+    margin-top: -20px;
+}
+/*Navigation bar links*/
+.navbar_navlink{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.navbar_navlink > a{
+    text-decoration: none;
+    margin: 40px;
+    color: black;
+}
+.navbar_navlink > a:first-child{
+    margin-right: 0;
+}
+.navbar_navlink > a:last-child{
+    margin-left: 0;
+}
+/*Header button*/
+.navbar_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+.navbar_btn > button{
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    color: #1894FF;
+    background-color: #E6F3FF;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+}
+.navbar_btn > button:hover{
+    background-color: #C3E1FE;
+    transition-duration: 0.5s;
+}
+
+
+
+/*Header of the page*/
+.header{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*Header image*/
+.header > img{
+    display: flex;
+    margin-left: 0;
+}
+/*Header titles and buttons*/
+.header_appDl{
+    display: flex;
+    flex-direction: column;
+    padding: 200px 100px;
+}
+.header_appDl > h1{
+    color: #1894FF;
+    font-size: 36px;
+    font-weight: bold;
+}
+.header_appDl > p{
+    font-size: 18px;
+    margin-top: -20px;
+}
+#header_dlBtn{
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: #1894ff;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+}
+#header_dlBtn:hover{
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+#header_membershipBtn{
+    font-weight: bold;
+    font-size: 16px;
+    color: #259aff;
+    background-color: white;
+    border: 1px solid #72beff;
+    border-radius: 10px;
+    margin: 5px;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+}
+#header_membershipBtn:hover{
+    background-color: #C3E1FE;
+    transition-duration: 0.5s;
+}
+
+
+
+/*About info*/
+.about{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+
+
+/*Services*/
+.service{
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+
+
+/*Download app*/
+.app{
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+}
+
+
+
+/*Enter phone number and register*/
+.register{
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+}
+
+
+
+/*Support info*/
+.support{
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1;
+}
+
+
+
+/*Footer of the page*/
+.footer{
+    grid-column: 1 / span 1;
+    grid-row: 8 / span 1;
+}
