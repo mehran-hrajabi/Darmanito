@@ -21,7 +21,7 @@ body{
 .grid-container{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 650px 500px 500px 400px 400px 200px 800px;
+    grid-template-rows: 100px 650px 500px 700px 600px 700px 130px 800px;
 }
 
 
@@ -74,7 +74,10 @@ body{
 .navbar_navlink > a:last-child{
     margin-left: 0;
 }
-/*Header button*/
+.navbar_navlink > a:hover{
+    color: #1894FF;
+}
+/*Button in the left side of the navigation bar*/
 .navbar_btn{
     display: flex;
     justify-content: center;
@@ -108,7 +111,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
-/*Header titles and buttons*/
+/*Header titles*/
 .header_appDl{
     display: flex;
     flex-direction: column;
@@ -123,6 +126,7 @@ body{
     font-size: 18px;
     margin-top: -20px;
 }
+/*Header buttons*/
 #header_dlBtn{
     font-weight: bold;
     font-size: 16px;
@@ -166,18 +170,17 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 100px 50px 100px;
 }
 .about > img{
-    margin-right: 100px;
     margin-left: 80px;
 }
 /*Descriptions in left side of the element*/
 .about_content{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    padding-top: 50px;
-    margin-left: 200px;
+    height: 450px;
+    padding-top: 10px;
 }
 .about_description{
     margin-bottom: 50px;
@@ -219,7 +222,81 @@ body{
 .service{
     grid-column: 1 / span 1;
     grid-row: 4 / span 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    margin-left: 100px;
 }
+.service > h2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #2361B5;
+    margin-right: 40px;
+}
+.service_body{
+    display: flex;
+    flex-direction: row;
+}
+/*ّFour items in the right side of the element*/
+.service_items{
+    width: 45%;
+}
+.service_items > div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+.service_items img{
+    margin: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.service_items img:hover,#active{
+    opacity: 1;
+}
+/*Description in the left side of the element*/
+.service_description{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.service_txt > p{
+    font-size: 16px;
+}
+.service_txt>:first-child{
+    font-weight: bold;
+}
+/*Steps*/
+.service_steps{
+    position: relative;
+}
+.step_title{
+    padding-right: 50px;
+}
+.step_description{
+    padding-right: 100px;
+}
+#vertical_line{
+    position: absolute;
+    border: 1px solid gray;
+    height: 160px;
+    top: 50px;
+    right: 20px;
+}
+#step1, #step2, #step3{
+    position: absolute;
+    right: 4px;
+}
+#step1{
+    bottom: 255px;
+}
+#step2{
+    bottom: 155px;
+}
+#step3{
+    bottom: 60px;
+}
+
 
 
 
@@ -227,6 +304,70 @@ body{
 .app{
     grid-column: 1 / span 1;
     grid-row: 5 / span 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #1793ff;
+}
+/*App download description and input field*/
+.app_body{
+    display: flex;
+    flex-direction: column;
+    margin: 120px 100px 0 100px;
+}
+.app_body > h1{
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.app_body > p{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.app_body input{
+    width: 500px;
+    height: 65px;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+.app_body button{
+    font-size: 16px;
+    background-color: #1894FF;
+    color: #FFFFFF;
+    width: 100px;
+    height: 45px;
+    margin: 0 -115px 50px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.app_body button:hover{
+    opacity: 0.8;
+}
+/*Download, Bazaar and Sib badges*/
+.input_btn_setup, .app_body > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.app_body a{
+    margin: 10px;
+}
+.app_body a:first-child{
+    margin-right: 0;
+}
+.app_body span{
+    color: #FFFFFF ;
+    cursor: pointer;
+    margin: 0 -130px 10px 40px;
+}
+/*Phone image*/
+.app > img{
+    margin-bottom: -150px;
+    margin-right: 80px;
 }
 
 
@@ -235,6 +376,57 @@ body{
 .register{
     grid-column: 1 / span 1;
     grid-row: 6 / span 1;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    margin:110px;
+}
+/*Register content*/
+.register_body{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    padding: 80px 60px 0 50px;
+}
+.register_body > h2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #2361B5;
+}
+.register_body > p{
+    font-size: 16px;
+}
+.register_body input{
+    background-color: #f9f9f9;
+    width: 500px;
+    height: 65px;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 20px;
+    margin-top: 50px;
+}
+.register_body button{
+    font-size: 16px;
+    background-color: #1894FF;
+    color: #FFFFFF;
+    width: 130px;
+    height: 45px;
+    margin: 50px -145px 0 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.register_body button:hover{
+    opacity: 0.8;
+}
+/*Doctor image*/
+.register img{
+    width: 45%;
+    padding: 130px 0 0 50px;
 }
 
 
@@ -243,6 +435,37 @@ body{
 .support{
     grid-column: 1 / span 1;
     grid-row: 7 / span 1;
+    background-color: #1894ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.support > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 110px;
+}
+.support h2{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+.support p{
+    color: #FFFFFF;
+    font-size: 14px;
+    padding-right: 50px;
+}
+.support img{
+    position: relative;
+}
+.support span{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    left:170px;
 }
 
 
