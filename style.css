@@ -118,6 +118,10 @@ body{
     flex-direction: column;
     padding: 200px 100px;
 }
+.header_appDl > div{
+    display: flex;
+    flex-direction: row;
+}
 .header_appDl > h1{
     color: #1894FF;
     font-size: 36px;
@@ -333,7 +337,7 @@ body{
 .app_body > h1{
     font-weight: bold;
     font-size: 24px;
-}
+} 
 .app_body > p{
     font-size: 16px;
 }
@@ -361,7 +365,7 @@ body{
     opacity: 0.8;
 }
 /*Download, Bazaar and Sib badges*/
-.input_btn_setup, .app_body > div{
+.app_body > div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -408,6 +412,11 @@ body{
     flex-direction: column;
     width: 55%;
     padding: 80px 60px 0 50px;
+}
+.register_body > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .register_body > h2{
     font-weight: bold;
@@ -479,13 +488,14 @@ body{
     padding-right: 50px;
 }
 .support img{
-    position: relative;
+    position: absolute;
+    left: 10%;
 }
 .support span{
     position: absolute;
     font-size: 16px;
     font-weight: bold;
-    left:170px;
+    left:13%;
 }
 
 
@@ -560,7 +570,7 @@ body{
     flex-direction: column;
     width: 35%;
 }
-.footer_download > h3{
+.footer_download > p{
     font-size: 16px;
     font-weight: bold;
     color: #141414;
@@ -611,7 +621,72 @@ body{
 
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    
+
+    .grid-container{grid-template-rows: 100px 350px 400px 1000px 350px 400px 130px 200px;}
+
+    .navbar{margin-right: 0;}
+    .darmanito_logo{width: 30%;}
+    .darmanito_logo h3{font-size: 14px; margin-top: 20px;}
+    .darmanito_logo p{font-size: 8px; margin-top: -5px;}
+    .navbar_navlink a{margin: 10px; font-size: 12px;}
+    .navbar_btn button, #header_dlBtn, #header_membershipBtn{font-size: 12px; width: 110px; height: 35px;}
+
+    .header_appDl{padding:80px 20px;}
+    .header_appDl h1{font-size: 20px;}
+    .header_appDl p{font-size: 12px; margin-top: 0;}
+    .header_appDl > div{flex-direction: column;}
+    .header img{width: 40%};
+
+    .about{padding: 0;}
+    .about > img{width: 40%;}
+    .about_content{width: 60%; padding-top: 100px}
+    .about_description > p{font-size: 12px;}
+    .about_items > div{margin: 5px;}
+    .about_items p{font-size: 10px;}
+
+    .service{margin: auto; width: 100%; padding:0 100px;}
+    .service > h2{text-align: center;}
+    .service_body{flex-direction: column;}
+    .service_items{width: 100%;}
+    .service_items > div{justify-content: center;}
+    .service_items_container{margin: 5px;}
+    .service_steps{width: 100%;}
+    .service_description{width:100%;}
+    .service_txt > p, .step_description{font-size: 12px;}
+    #vertical_line{right: 3%;}
+
+    .app{width: 100%; justify-content: space-between;}
+    .app_body{padding: 50px 50px 0 0;}
+    .app_body h1{font-size: 20px;}
+    .app_body p {font-size: 12px;}
+    .app_body input{width:350px; height: 40px; font-size: 12px;}
+    .app_body button{width: 80px; height: 30px; margin: 0 -90px 50px 0; font-size: 12px;}
+    .app_body span{font-size: 10px; right:8%}
+    .app_badge img{width: 95%;}
+    .app > img{width: 70%;}
+
+    .register_body{padding : 20px 20px 0 20px;}
+    .register_body h2{font-size: 16px;}
+    .register_body p{font-size: 12px;}
+    .register_body input{width: 300px; height: 40px; font-size: 12px;}
+    .register_body button{width: 80px; height: 30px; font-size: 12px; margin: 50px -90px 0 0;}
+
+    .support > div{margin: 0 10px;}
+    .support h2{font-size: 16px;}
+    .support p{font-size: 10px;}
+    .support span{font-size: 12px; left: 15%;}
+    .support img{width: 25%;}
+
+    .footer{padding: 0 20px;}
+    .footer_info{width: 40%;}
+    .footer_info > h3, .footer_info > p, .footer_links a{font-size: 10px;}
+    .footer_icons{padding-top: 0;}
+    .footer_icons i{font-size: 16px;}
+    .footer_links{width: 20%;}
+    .footer_links p, .footer_download p{font-size: 12px;}
+    .footer_download > div{flex-direction: column;}
+    .footer_download{width: 20%;}
+    .footer_download img{width: 80%;}
 }
 
 
