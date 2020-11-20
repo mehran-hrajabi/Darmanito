@@ -101,6 +101,10 @@ body{
     background-color: #C3E1FE;
     transition-duration: 0.5s;
 }
+/*Menu icon for mobile version*/
+.navbar_icon{
+    display: none;
+}
 
 
 
@@ -435,7 +439,6 @@ body{
     outline: none;
     border: none;
     font-size: 16px;
-    padding: 20px;
     margin-top: 50px;
 }
 .register_body button{
@@ -592,6 +595,7 @@ body{
 
 /*Large devices (Smaller laptops/desktops, 992px-1200px)*/
 @media only screen and (min-width: 992px) and (max-width: 1200px){
+
     .darmanito_logo {padding-left: 50px;}
 
     .navbar_navlink a{margin: 25px;}
@@ -692,6 +696,70 @@ body{
 
 
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    
+@media only screen and (max-width: 768px) {
+
+    .grid-container{grid-template-rows: 80px 800px 600px 1100px 850px 850px 170px 200px;}
+
+    .navbar{justify-content: space-between; margin-right: 50px;}
+    .navbar_navlink{display: none;}
+    .navbar_btn{display: none;}
+    .navbar_icon{display: flex; cursor: pointer; margin-left: 50px;}
+    .darmanito_logo{padding-left: 0;}
+    .darmanito_logo h3{font-size: 14px;}
+    .darmanito_logo p{font-size: 10px; margin-top: -5px;}
+
+    .header{flex-direction: column-reverse; justify-content: center; margin: auto;}
+    .header_appDl{padding: 0 100px 20px 100px; margin: auto}
+    .header_appDl h1{font-size: 24px; text-align: center;}
+    .header_appDl p{font-size: 14px; text-align: center;}
+    .header_appDl > div{flex-direction: column; margin: auto}
+    .header img{width: 80%; margin: auto;}
+
+    .about{flex-direction: column; padding: 0 100px;}
+    .about_content{height: auto; padding-top: 0; margin-top: -100px;}
+    .about_items{display: none;}
+    .about img{margin: auto; width: 80%;}
+    .about_description{margin-bottom: 0;}
+    .about_description h2{font-size: 16px;}
+    .about_description p{font-size: 12px;}
+
+    .service{padding: 0; margin: auto;}
+    .service > h2{font-size: 16px; padding-right: 70px;}
+    .service_body{flex-direction: column;}
+    .service_items{width: 100%;}
+    .service_items > div{margin: auto;}
+    .service_description{width:100%; margin: auto; padding: 0 100px;}
+    .step_title{font-size: 14px;}
+    .step_description, .service_steps > p{font-size: 12px;}
+    #vertical_line{right: 3.5%;}
+
+    .app{flex-direction: column;}
+    .app_body{width:100%; margin: auto; padding-top:25px ;}
+    .app_body > h1{font-size: 16px; text-align: center;}
+    .app_body > p{font-size: 12px; text-align: center;}
+    .app_body input{width: 350px; height: 55px; font-size: 12px; margin-bottom: 10px;}
+    .app_body > div{margin: auto;}
+    .app_badge a:first-child, .app_badge>span{display: none;}
+    .app_body button{width: 85px; height: 35px; margin: 0 -90px 10px 0;}
+    .app > img{margin: auto;}
+
+    .register{margin-top: 150px; flex-direction: column-reverse; justify-content: center; width: 90%; padding:30px}
+    .register img{width: 100%; padding: 0}
+    .register_body{width: 100%; padding:0 10px;}
+    .register_body p{font-size: 12px;}
+    .register_body h2{font-size: 16px;}
+    .register_body input{margin: auto; font-size: 12px; width: 350px; height: 55px;}
+    .register_body button{width: 90px; height: 35px; font-size: 12px;margin: 0;position: relative; left: 26%;}
+
+    .support{flex-direction: column;}
+    .support > div{flex-direction: column; margin: auto;}
+    .support h2{font-size: 16px; text-align: center; margin:auto}
+    .support p{font-size: 12px; text-align: center; padding-right: 0; margin: auto;}
+    .support img{position: relative; right: 3%;}
+    .support span{position: relative; bottom: 50%; right: 5%;}
+
+    .footer{margin:auto;}
+    .footer_links, .footer_download{display: none;}
+    .footer_info{width: 100%; margin:auto;}
+    .footer_icons{justify-content: center;}
 }
