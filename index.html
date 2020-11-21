@@ -11,8 +11,11 @@
     <script src="script.js"></script><!--JS external file-->
 </head>
 
+<!--Layout container-->
 <div class="grid-container">
+    <!--Navigation bar-->
     <div class="navbar">
+        <!--Darmanito logo-->
         <div class="darmanito_logo">
             <a href="index.html"><img src="pic/navbar_icon.svg"></a>
             <div>
@@ -21,6 +24,7 @@
             </div>
         </div>
 
+        <!--Navigation bar links-->
         <div class="navbar_navlink">
             <a href="#">صفحه اصلی</a>
             <a href="#">درباره ما</a>
@@ -28,22 +32,54 @@
             <a href="#">عضویت داروخانه ها</a>
         </div>
 
+        <!--Button in the left side of the navigation bar-->
         <div class="navbar_btn">
             <button type="button">دانلود درمانیتو</button>
         </div>
 
         <!--Overlay navigation menu for mobile version-->
+        <div id="menu" class="navbar_menu">
+            <div class="menu_logo">
+                <div class="darmanito_logo">
+                    <a href="index.html"><img src="pic/navbar_icon.svg"></a>
+                    <div>
+                        <h3>درمانیتو</h3>
+                        <p>همراه شما در درمان</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" onclick="closeMenu()"><img src="pic/close_btn.svg"></a>
+
+            <div class="menu_body">
+                <a href="index.html">صفحه اصلی</a>
+                <a href="#">عضویت در داروخانه ها</a>
+                <a href="#">درباره ما</a>
+                <a href="#">تماس با ما</a>
+                <a href="#">سوالات متداول</a>
+                <a href="#">قوانین و شرایط</a>
+                <hr>
+                <div class="navbar_btn">
+                    <button type="button">دانلود درمانیتو</button>
+                </div>
+            </div>
+        </div>
+
         <div class="navbar_icon">
             <img src="pic/menu_icon.svg" onclick="openMenu()">
         </div>
+
     </div>
 
 
 
+    <!--Header of the page-->
     <div class="header">
+        <!--Header titles-->
         <div class="header_appDl">
             <h1>اپلیکیشن درمانیتو</h1>
             <p>درمانیتو، سامانه هوشمند درمان و سلامت</p>
+            <!--Header buttons-->
             <div>
                 <button type="button" id="header_dlBtn">دانلود درمانیتو</button>
                 <button type="button" id="header_membershipBtn">عضویت داروخانه ها</button>
@@ -55,9 +91,11 @@
 
 
 
+    <!--About info-->
     <div class="about">
         <img src="pic/about_phone.svg" alt="درباره درمانیتو">
 
+        <!--Descriptions in left side of the element-->
         <div class="about_content">
             <div class="about_description">
             <h2>درباره درمانیتو</h2>
@@ -65,6 +103,7 @@
                  نوبت گیری و مشاوره پزشکان را به راحتی و به صورت آنلاین فراهم کرده است.</p>
             </div>
 
+            <!--Icons in the left side of the element-->
             <div class="about_items">
                 <div>
                     <img src="pic/tic_icon.svg" alt="جستجوی سریغ">
@@ -88,9 +127,11 @@
 
 
 
+    <!--Services-->
     <div class="service">
         <h2>امکانات درمانیتو</h2>
 
+        <!--Four items in the right side of the element-->
         <div class="service_body">
             <div class="service_items">
                 <div>
@@ -116,12 +157,14 @@
                 </div>
             </div>
 
+            <!--Description in the left side of the element-->
             <div class="service_description">
                 <div class="service_txt">
                     <p>داروخانه آنلاین</p>
                     <p>در سرویس داروخانه شما میتوانید نسخه دارویی یا 
                         محصول بهداشتی خودتون رو برای پیدا شدن به داروخانه و فروشگاه ها سفارش بدید. </p>
                 </div>
+                <!--Steps-->
                 <div class="service_steps">
                     <div id="vertical_line"></div>
 
@@ -143,7 +186,9 @@
 
 
 
+    <!--Download app-->
     <div class="app">
+        <!--App download description and input field-->
         <div class="app_body">
             <h1>دانلود اپلیکیشن درمانیتو</h1>
             <p>برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.</p>
@@ -152,6 +197,7 @@
                 <button type="button">بفرست</button>
             </div>
 
+            <!--Download, Bazaar and Sib badges-->
             <div class="app_badge">
                 <a href="#"><img src="pic/download_badge.svg"></a>
                 <span>دانلود مستقیم</span>
@@ -160,13 +206,16 @@
             </div>
         </div>
 
+        <!--Phone image-->
         <img src="pic/app_phone.svg" alt="دانلود اپلیکیشن درمانیتو">
     </div>
 
 
 
+    <!--Enter phone number and register-->
     <div class="register">
-        <div class="register_body">
+        <!--Register content-->
+        <div class="register_body">    
             <h2>عضویت داروخانه یا مراکز درمانی</h2>
             <p>اگر به عنوان داروخانه یا مرکز درمانی قصد دارید در روند درمان و
                  کسب کار خودتان تغییری ایجاد کنید درمانیتو منتظر شماست.</p>
@@ -177,11 +226,13 @@
             </div>
         </div>
 
+        <!--Doctor image-->
         <img src="pic/register.svg" alt="عضویت در درمانیتو">
     </div>
 
 
 
+    <!--Support info-->
     <div class="support">
         <div>
             <h2>پشتیبانی درمانیتو</h2>
@@ -195,7 +246,9 @@
 
 
 
+    <!--Footer of the page-->
     <div class="footer">
+        <!--Right side-->
         <div class="footer_info">
             <div class="darmanito_logo">
                 <a href="index.html"><img src="pic/navbar_icon.svg"></a>
@@ -214,6 +267,7 @@
             </div>
         </div>
 
+        <!--Middle column-->
         <div class="footer_links">
             <p>خدمات درمانیتو</p>
             <a href="#" id="current">داروخانه آنلاین</a>
@@ -230,6 +284,7 @@
             <a href="#">قوانین و شرایط</a>
         </div>
 
+        <!--Left side-->
         <div class="footer_download">
             <p>دانلود درمانیتو</p>
 
