@@ -1,0 +1,19 @@
+{
+  "name": "darmanito",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehran-hrajabi/Darmanito.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehran-hrajabi/Darmanito/issues"
+  },
+  "homepage": "https://github.com/mehran-hrajabi/Darmanito#readme"
+}
