@@ -6,9 +6,9 @@
     <title>درمانیتو</title>
     <meta charset="UTF-8" content="درمانیتو">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css"><!--CSS external file-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><!--CSS external file-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script><!--Font Awesome 5 icons-->
-    <script src="script.js"></script><!--JS external file-->
+    <script type="text/javascript" src="assets/js/script.js"></script><!--JS external file-->
 </head>
 
 <!--Layout container-->
@@ -17,7 +17,7 @@
     <div class="navbar">
         <!--Darmanito logo-->
         <div class="darmanito_logo">
-            <a href="index.html"><img src="pic/navbar_icon.svg"></a>
+            <a href="index.html"><img src="assets/pic/navbar_icon.svg"></a>
             <div>
                 <h3>درمانیتو</h3>
                 <p>همراه شما در درمان</p>
@@ -26,7 +26,7 @@
 
         <!--Navigation bar links-->
         <div class="navbar_navlink">
-            <a href="#">صفحه اصلی</a>
+            <a href="index.html">صفحه اصلی</a>
             <a href="#">درباره ما</a>
             <a href="#">تماس با ما</a>
             <a href="#">عضویت داروخانه ها</a>
@@ -41,7 +41,7 @@
         <div id="menu" class="navbar_menu">
             <div class="menu_logo">
                 <div class="darmanito_logo">
-                    <a href="index.html"><img src="pic/navbar_icon.svg"></a>
+                    <a href="index.html"><img src="assets/pic/navbar_icon.svg"></a>
                     <div>
                         <h3>درمانیتو</h3>
                         <p>همراه شما در درمان</p>
@@ -49,14 +49,14 @@
                 </div>
             </div>
 
-            <a href="javascript:void(0)" onclick="closeMenu()"><img src="pic/close_btn.svg"></a>
+            <a href="javascript:void(0)" onclick="closeMenu()"><img src="assets/pic/close_btn.svg"></a>
 
             <div class="menu_body">
                 <a href="index.html">صفحه اصلی</a>
                 <a href="#">عضویت در داروخانه ها</a>
                 <a href="#">درباره ما</a>
                 <a href="#">تماس با ما</a>
-                <a href="#">سوالات متداول</a>
+                <a href="faq.html">سوالات متداول</a>
                 <a href="#">قوانین و شرایط</a>
                 <hr>
                 <div class="navbar_btn">
@@ -66,7 +66,7 @@
         </div>
 
         <div class="navbar_icon">
-            <img src="pic/menu_icon.svg" onclick="openMenu()">
+            <img src="assets/pic/menu_icon.svg" onclick="openMenu()">
         </div>
 
     </div>
@@ -86,14 +86,14 @@
             </div>
         </div>
 
-        <img src="pic/header_doctor.svg" alt="Doctor">
+        <img src="assets/pic/header_doctor.svg" alt="Doctor">
     </div>
 
 
 
     <!--About info-->
     <div class="about">
-        <img src="pic/about_phone.svg" alt="درباره درمانیتو">
+        <img src="assets/pic/about_phone.svg" alt="درباره درمانیتو">
 
         <!--Descriptions in left side of the element-->
         <div class="about_content">
@@ -106,19 +106,19 @@
             <!--Icons in the left side of the element-->
             <div class="about_items">
                 <div>
-                    <img src="pic/tic_icon.svg" alt="جستجوی سریغ">
+                    <img src="assets/pic/tic_icon.svg" alt="جستجوی سریغ">
                     <p>جستجوی سریع</p>
                 </div>
                 <div>
-                    <img src="pic/efficient_icon.svg" alt="به صرفه">
+                    <img src="assets/pic/efficient_icon.svg" alt="به صرفه">
                     <p>به صرفه</p>
                 </div>
                 <div>
-                    <img src="pic/easy_icon.svg" alt="راحت">
+                    <img src="assets/pic/easy_icon.svg" alt="راحت">
                     <p>راحت</p>
                 </div>
                 <div>
-                    <img src="pic/search_icon.svg" alt="جستجوی سریع">
+                    <img src="assets/pic/search_icon.svg" alt="جستجوی سریع">
                     <p>جستجوی سریع</p>
                 </div>
             </div>
@@ -136,22 +136,22 @@
             <div class="service_items">
                 <div>
                     <div class="service_items_container" id="active">
-                        <img src="pic/pharmacy_icon.svg" alt="داروخانه">
+                        <img src="assets/pic/pharmacy_icon.svg" alt="داروخانه">
                         <span>داروخانه</span>
                     </div>
                     <div class="service_items_container">
-                        <img src="pic/shop_icon.svg" alt="فروشگاه">
+                        <img src="assets/pic/shop_icon.svg" alt="فروشگاه">
                         <span>فروشگاه</span>
                     </div>
                 </div>
 
                 <div>
                     <div class="service_items_container">
-                        <img src="pic/visit_icon.svg" alt="ویزیت آنلاین">
+                        <img src="assets/pic/visit_icon.svg" alt="ویزیت آنلاین">
                         <span id="alignment_exception1">ویزیت آنلاین</span>
                     </div>
                     <div class="service_items_container">
-                        <img src="pic/reserve_icon.svg" alt="رزرو آنلاین">
+                        <img src="assets/pic/reserve_icon.svg" alt="رزرو آنلاین">
                         <span id="alignment_exception2">نوبت دهی آنلاین</span>
                     </div>    
                 </div>
@@ -168,15 +168,15 @@
                 <div class="service_steps">
                     <div id="vertical_line"></div>
 
-                    <img id="step1" src="pic/arrow.svg">
+                    <img id="step1" src="assets/pic/arrow.svg">
                     <p class="step_title">قدم اول</p>
                     <p class="step_description">وارد بخش سفارش با عکس نسخه شوید و عکس و توضیحات را وارد کنید.</p>
 
-                    <img id="step2" src="pic/arrow.svg">
+                    <img id="step2" src="assets/pic/arrow.svg">
                     <p class="step_title">قدم دوم</p>
                     <p class="step_description">بعد از ارسال عکس نسخه، باید آدرس محل خودتون رو وارد کنید.</p>
 
-                    <img id="step3" src="pic/done_icon.svg">
+                    <img id="step3" src="assets/pic/done_icon.svg">
                     <p class="step_title">قدم سوم</p>
                     <p class="step_description">اگر نتیجه جستجوی نسخه موفقیت آمیز باشه باید منتظر تحویل سفارش باشید.</p>
                 </div>
@@ -199,15 +199,15 @@
 
             <!--Download, Bazaar and Sib badges-->
             <div class="app_badge">
-                <a href="#"><img src="pic/download_badge.svg"></a>
+                <a href="#"><img src="assets/pic/download_badge.svg"></a>
                 <span>دانلود مستقیم</span>
-                <a href="#"><img src="pic/bluebazaar_badge.svg"></a>
-                <a href="#"><img src="pic/bluesib_badge.svg"></a>
+                <a href="#"><img src="assets/pic/bluebazaar_badge.svg"></a>
+                <a href="#"><img src="assets/pic/bluesib_badge.svg"></a>
             </div>
         </div>
 
         <!--Phone image-->
-        <img src="pic/app_phone.svg" alt="دانلود اپلیکیشن درمانیتو">
+        <img src="assets/pic/app_phone.svg" alt="دانلود اپلیکیشن درمانیتو">
     </div>
 
 
@@ -227,7 +227,7 @@
         </div>
 
         <!--Doctor image-->
-        <img src="pic/register.svg" alt="عضویت در درمانیتو">
+        <img src="assets/pic/register.svg" alt="عضویت در درمانیتو">
     </div>
 
 
@@ -239,7 +239,7 @@
             <p>پاسخگویی در روزهای کاری از 9 صبح تا 9 شب</p>
         </div>
         <div>
-            <img src="pic/support_icon.svg">
+            <img src="assets/pic/support_icon.svg">
             <span>پشتیبانی : ۰۲۱۴۴۲۱۹۶۷۱</span>
         </div>
     </div>
@@ -251,7 +251,7 @@
         <!--Right side-->
         <div class="footer_info">
             <div class="darmanito_logo">
-                <a href="index.html"><img src="pic/navbar_icon.svg"></a>
+                <a href="index.html"><img src="assets/pic/navbar_icon.svg"></a>
                 <div>
                     <h3>درمانیتو</h3>
                     <p>همراه شما در درمان</p>
@@ -280,7 +280,7 @@
             <p>صفحات درمانیتو</p>
             <a href="#">تماس با ما</a>
             <a href="#">درباره ما</a>
-            <a href="#">سوالات متداول</a>
+            <a href="faq.html">سوالات متداول</a>
             <a href="#">قوانین و شرایط</a>
         </div>
 
@@ -289,8 +289,8 @@
             <p>دانلود درمانیتو</p>
 
             <div>
-                <a href="#"><img src="pic/bazaar_badge.svg"></a>
-                <a href="#"><img src="pic/sib_badge.svg"></a>
+                <a href="#"><img src="assets/pic/bazaar_badge.svg"></a>
+                <a href="#"><img src="assets/pic/sib_badge.svg"></a>
             </div>
         </div>
     </div>
