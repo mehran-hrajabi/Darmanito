@@ -1,0 +1,314 @@
+/*Font assign*/
+@font-face {
+  font-family: Yekan;
+  src: url(../font/Yekan.woff);
+}
+/*Whole page*/
+* {
+  font-family: Yekan;
+  font-style: normal;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+/*Body of the page*/
+body {
+  background-color: #f8f9fd;
+}
+
+/*All buttons*/
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/*All links*/
+a, a:hover {
+  text-decoration: none;
+}
+
+/*Color variables*/
+/*Font size variables*/
+/*Flex mixin*/
+/*Navigation bar*/
+.navbar {
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: center;
+  margin-right: 100px;
+}
+
+/*Darmanito logo*/
+.darmanito_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: initial;
+  padding-left: 80px;
+}
+
+.darmanito_logo > a {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: initial;
+  margin-left: 10px;
+}
+
+.darmanito_logo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  justify-content: initial;
+}
+
+.darmanito_logo h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.darmanito_logo p {
+  font-size: 12px;
+  margin-top: -20px;
+}
+
+/*Navigation bar links*/
+.navbar_navlink {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: initial;
+  width: 50%;
+}
+
+.navbar_navlink > a {
+  margin: 40px;
+  color: black;
+}
+
+.navbar_navlink > a:first-child {
+  margin-right: 0;
+}
+
+.navbar_navlink > a:last-child {
+  margin-left: 0;
+}
+
+.navbar_navlink > a:hover {
+  color: #1894FF;
+}
+
+/*Button in the left side of the navigation bar*/
+.navbar_btn {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.navbar_btn > button {
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #1894FF;
+  background-color: #E6F3FF;
+  width: 170px;
+  height: 50px;
+}
+
+.navbar_btn > button:hover {
+  background-color: #C3E1FE;
+  transition-duration: 0.5s;
+}
+
+/*Color variables*/
+/*Font size variables*/
+/*Flex mixin*/
+/*Support info*/
+.support {
+  grid-column: 1/span 1;
+  grid-row: 4/span 1;
+  background-color: #1894FF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.support > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: initial;
+  margin: 0 110px;
+}
+
+.support h2, .support p, .support span {
+  color: white;
+}
+
+.support h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.support p {
+  font-size: 14px;
+  padding-right: 50px;
+}
+
+.support img {
+  position: absolute;
+  left: 10%;
+}
+
+.support span {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  left: 13%;
+}
+
+/*Color variables*/
+/*Font size variables*/
+/*Flex mixin*/
+/*Footer of the page*/
+.footer {
+  grid-column: 1/span 1;
+  grid-row: 5/span 1;
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: initial;
+  padding: 50px 100px 0 100px;
+}
+
+/*Right side*/
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  justify-content: initial;
+  width: 35%;
+}
+
+.footer_info > h3 {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer_info > p {
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+.footer_icons {
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: initial;
+  padding-top: 20px;
+}
+
+.footer_icons a {
+  padding-left: 25px;
+}
+
+.footer_icons a:last-child {
+  padding-left: 0;
+}
+
+.fab {
+  color: black;
+}
+
+.fa-linkedin-in, .fa-twitter, .fa-instagram {
+  font-size: 25px;
+  color: #b9b9b9;
+}
+
+/*Their real color codes*/
+.fa-linkedin-in:hover {
+  color: #0072b1;
+}
+
+.fa-twitter:hover {
+  color: #00acee;
+}
+
+.fa-instagram:hover {
+  color: #C13584;
+}
+
+/*Middle column*/
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  justify-content: initial;
+  width: 15%;
+}
+
+.footer_links p {
+  color: #141414;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer_links a {
+  color: #141414;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.footer_links a:hover, #current {
+  color: #2361B5;
+}
+
+/*Left side*/
+.footer_download {
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  justify-content: initial;
+  width: 35%;
+}
+
+.footer_download > p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #141414;
+}
+
+.footer_download > div {
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: initial;
+}
+
+.footer_download a {
+  padding: 10px 0 0 10px;
+}
+
+.footer_download a:hover {
+  opacity: 0.7;
+}
+
+/*Color variables*/
+/*Font size variables*/
+/*Flex mixin*/
+/*Color variables*/
+/*Font size variables*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 120px 900px 130px 350px;
+}
+
+/*# sourceMappingURL=styles.css.map */

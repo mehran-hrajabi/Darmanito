@@ -1,0 +1,820 @@
+/*Font assign*/
+@font-face{
+    font-family: Yekan;
+    src: url(../font/Yekan.woff);
+}
+
+/*Whole page*/
+*{
+    font-family: Yekan;
+    font-style : normal ;
+	font-weight : normal ;
+    box-sizing : border-box ;
+}
+
+/*Body of the page*/
+body{
+    background-color: #f8f9fd;
+}
+
+/*Layout container*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 650px 500px 700px 600px 700px 130px 350px;
+}
+
+
+
+/*Navigation bar*/
+.navbar{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 100px;
+}
+/*Darmanito logo*/
+.darmanito_logo{
+    display: flex;
+    flex-direction: row;
+    padding-left: 80px;
+}
+.darmanito_logo > a{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.darmanito_logo > div{
+    display: flex;
+    flex-direction: column;
+}
+.darmanito_logo h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.darmanito_logo p{
+    font-size: 12px;
+    margin-top: -20px;
+}
+/*Navigation bar links*/
+.navbar_navlink{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.navbar_navlink > a{
+    text-decoration: none;
+    margin: 40px;
+    color: black;
+}
+.navbar_navlink > a:first-child{
+    margin-right: 0;
+}
+.navbar_navlink > a:last-child{
+    margin-left: 0;
+}
+.navbar_navlink > a:hover{
+    color: #1894FF;
+}
+/*Button in the left side of the navigation bar*/
+.navbar_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+.navbar_btn > button{
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    color: #1894FF;
+    background-color: #E6F3FF;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+}
+.navbar_btn > button:hover{
+    background-color: #C3E1FE;
+    transition-duration: 0.5s;
+}
+/*Overlay navigation menu for mobile version*/
+.navbar_icon{display: none;}
+.navbar_menu{display: none;}
+
+
+
+/*Header of the page*/
+.header{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*Header titles*/
+.header_appDl{
+    display: flex;
+    flex-direction: column;
+    padding: 200px 100px;
+}
+.header_appDl > div{
+    display: flex;
+    flex-direction: row;
+}
+.header_appDl > h1{
+    color: #1894FF;
+    font-size: 36px;
+    font-weight: bold;
+}
+.header_appDl > p{
+    font-size: 18px;
+    margin-top: -20px;
+}
+/*Header buttons*/
+#header_dlBtn{
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: #1894ff;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+}
+#header_dlBtn:hover{
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+#header_membershipBtn{
+    font-weight: bold;
+    font-size: 16px;
+    color: #259aff;
+    background-color: white;
+    border: 1px solid #72beff;
+    border-radius: 10px;
+    margin: 5px;
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+}
+#header_membershipBtn:hover{
+    background-color: #C3E1FE;
+    transition-duration: 0.5s;
+}
+
+
+
+/*About info*/
+.about{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px 50px 100px;
+}
+.about > img{
+    margin-left: 80px;
+}
+/*Descriptions in left side of the element*/
+.about_content{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    padding-top: 10px;
+}
+.about_description{
+    margin-bottom: 50px;
+}
+.about_description > h2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #2361B5;
+}
+.about_description > p{
+    font-size: 16px;
+    margin: auto;
+}
+/*Icons in the left side of the element*/
+.about_items{
+    display: flex;
+    flex-direction: row;
+}
+.about_items > div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.about_items > div:first-child{
+    margin-right: 0;
+}
+.about_items img{
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 10px rgb(114, 190, 255, 0.1);
+}
+.about_items p{
+    font-size: 14px;
+    color: #141414;
+    margin: auto;
+}
+
+
+
+/*Services*/
+.service{
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 100px;
+    margin: auto;
+}
+.service > h2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #2361B5;
+    margin-right: 30px;
+}
+/*ّFour items in the right side of the element*/
+.service_body{
+    display: flex;
+    flex-direction: row;
+}
+.service_items{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.service_items > div{
+    display: flex;
+    flex-direction: row;
+}
+.service_items_container{
+    position: relative;
+    margin: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.service_items_container:hover,#active{
+    opacity: 1;
+}
+.service_items img{
+    border-radius: 25px;
+    box-shadow: 0 10px 20px 10px rgb(114, 190, 255, 0.1);
+}
+.service_items span{
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    color: #2361B5;
+    top: 65%;
+    right: 35%;
+}
+/*Two exceptions for two elements to have a better alignment*/
+#alignment_exception1{right: 25%;}
+#alignment_exception2{right: 20%;}
+/*Description in the left side of the element*/
+.service_description{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.service_txt > p{
+    font-size: 16px;
+}
+.service_txt>:first-child{
+    font-weight: bold;
+}
+/*Steps*/
+.service_steps{
+    position: relative;
+}
+.step_title{
+    padding-right: 50px;
+}
+.step_description{
+    padding-right: 100px;
+}
+#vertical_line{
+    position: absolute;
+    border: 1px solid gray;
+    height: 60%;
+    top: 12%;
+    right: 2.3%;
+}
+#step1, #step2, #step3{
+    position: absolute;
+    right: 0;
+}
+#step1{bottom: 83.5%;}
+#step2{bottom: 52%;}
+#step3{bottom: 20%;}
+
+
+
+/*Download app*/
+.app{
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #0089FF;
+}
+/*App download description and input field*/
+.app_body{
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+}
+.app_body > h1, .app_body > p, .app_body button, .app_body span{
+    color: #FFFFFF;
+}
+.app_body > h1{
+    font-weight: bold;
+    font-size: 24px;
+} 
+.app_body > p{
+    font-size: 16px;
+}
+.app_body input{
+    width: 500px;
+    height: 65px;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+.app_body button{
+    font-size: 16px;
+    background-color: #1894FF;
+    width: 100px;
+    height: 45px;
+    margin: 0 -115px 50px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.app_body button:hover{
+    opacity: 0.8;
+}
+/*Download, Bazaar and Sib badges*/
+.app_body > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.app_body a{
+    margin: 10px;
+}
+.app_body a:first-child{
+    margin-right: 0;
+}
+.app_badge{
+    position: relative;
+}
+.app_body span{
+    position: absolute;
+    right: 10%;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+/*Phone image*/
+.app > img{
+    position: relative;
+    bottom: -10%;
+    right: 0;
+}
+
+
+
+/*Enter phone number and register*/
+.register{
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 25px;
+    margin:auto;
+    width: 80%;
+}
+/*Register content*/
+.register_body{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    padding: 80px 60px 0 50px;
+}
+.register_body > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.register_body > h2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #2361B5;
+}
+.register_body > p{
+    font-size: 16px;
+}
+.register_body input{
+    background-color: #f9f9f9;
+    width: 500px;
+    height: 65px;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin-top: 50px;
+}
+.register_body button{
+    font-size: 16px;
+    background-color: #1894FF;
+    color: #FFFFFF;
+    width: 130px;
+    height: 45px;
+    margin: 50px -145px 0 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.register_body button:hover{
+    opacity: 0.8;
+}
+/*Doctor image*/
+.register img{
+    width: 45%;
+    padding: 130px 0 0 50px;
+}
+
+
+
+/*Support info*/
+.support{
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1;
+    background-color: #1894ff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.support > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 110px;
+}
+.support h2, .support p, .support span{
+    color: #FFFFFF;
+}
+.support h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+.support p{
+    font-size: 14px;
+    padding-right: 50px;
+}
+.support img{
+    position: absolute;
+    left: 10%;
+}
+.support span{
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    left:12.5%;
+}
+
+
+
+/*Footer of the page*/
+.footer{
+    grid-column: 1 / span 1;
+    grid-row: 8 / span 1;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 100px 0 100px;
+}
+/*Right side*/
+.footer_info{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.footer_info > h3{
+    font-weight: bold;
+    font-size: 14px;
+}
+.footer_info > p{
+    font-size: 14px;
+    margin-top: -10px;
+}
+.footer_icons{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+.footer_icons a{
+    padding-left: 25px;
+}
+.footer_icons a:last-child{
+    padding-left: 0;
+}
+.fab{
+    color: black;
+}
+.fa-linkedin-in, .fa-twitter, .fa-instagram{
+    font-size: 25px;
+    color: #b9b9b9;
+}
+/*Their real color codes*/
+.fa-linkedin-in:hover{color: #0072b1;}
+.fa-twitter:hover{color: #00acee;}
+.fa-instagram:hover{color: #C13584;}
+/*Middle column*/
+.footer_links{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+.footer_links p{
+    color: #141414;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer_links a{
+    text-decoration: none;
+    color: #141414;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+.footer_links a:hover, #current{
+    color: #2361B5;
+}
+/*Left side*/
+.footer_download{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.footer_download > p{
+    font-size: 16px;
+    font-weight: bold;
+    color: #141414;
+}
+.footer_download > div{
+    display: flex;
+    flex-direction: row;
+}
+.footer_download a{
+    padding: 10px 0 0 10px;
+}
+.footer_download a:hover{
+    opacity: 0.7;
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+
+    .darmanito_logo {padding-left: 50px;}
+
+    .navbar_navlink a{margin: 25px;}
+
+    .header img {width: 50%;}
+
+    .service_items_container{margin: 5px;}
+    .step_description{font-size: 14px;}
+    #vertical_line{right: 3%;}
+    #step1{bottom: 82%;}
+    #step2{bottom: 50%;}
+
+    .register_body{padding: 30px 30px 0 30px;}
+    .register_body > p{font-size: 14px;}
+    .register_body input{font-size: 14px; width: 400px;}
+    .register_body button{font-size: 14px;}
+
+    .support h2{font-size: 16px;}
+    .support p{font-size: 12px;}
+    
+    .footer_info p{font-size: 12px;}
+    .footer_download{padding-right: 20px;}
+    .footer_links{font-size: 14px;}
+}
+
+
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+    .grid-container{grid-template-rows: 100px 350px 400px 1000px 350px 400px 130px 200px;}
+
+    .navbar{margin-right: 0;}
+    .darmanito_logo{width: 30%;}
+    .darmanito_logo h3{font-size: 14px; margin-top: 20px;}
+    .darmanito_logo p{font-size: 8px; margin-top: -5px;}
+    .navbar_navlink a{margin: 10px; font-size: 12px;}
+    .navbar_btn button, #header_dlBtn, #header_membershipBtn{font-size: 12px; width: 110px; height: 35px;}
+
+    .header_appDl{padding:80px 20px;}
+    .header_appDl h1{font-size: 20px;}
+    .header_appDl p{font-size: 12px; margin-top: 0;}
+    .header_appDl > div{flex-direction: column;}
+    .header img{width: 40%};
+
+    .about{padding: 0;}
+    .about > img{width: 40%;}
+    .about_content{width: 60%; padding-top: 100px}
+    .about_description > p{font-size: 12px;}
+    .about_items > div{margin: 5px;}
+    .about_items p{font-size: 10px;}
+
+    .service{margin: auto; width: 100%; padding:0 100px;}
+    .service > h2{text-align: center;}
+    .service_body{flex-direction: column;}
+    .service_items{width: 100%;}
+    .service_items > div{justify-content: center;}
+    .service_items_container{margin: 5px;}
+    .service_steps{width: 100%;}
+    .service_description{width:100%;}
+    .service_txt > p, .step_description{font-size: 12px;}
+    #vertical_line{right: 3%;}
+
+    .app{width: 100%; justify-content: space-between;}
+    .app_body{padding: 50px 50px 0 0;}
+    .app_body h1{font-size: 20px;}
+    .app_body p {font-size: 12px;}
+    .app_body input{width:350px; height: 40px; font-size: 12px;}
+    .app_body button{width: 80px; height: 30px; margin: 0 -90px 50px 0; font-size: 12px;}
+    .app_body span{font-size: 10px; right:8%}
+    .app_badge img{width: 95%;}
+    .app > img{width: 70%;}
+
+    .register_body{padding : 20px 20px 0 20px;}
+    .register_body h2{font-size: 16px;}
+    .register_body p{font-size: 12px;}
+    .register_body input{width: 300px; height: 40px; font-size: 12px;}
+    .register_body button{width: 80px; height: 30px; font-size: 12px; margin: 50px -90px 0 0;}
+
+    .support > div{margin: 0 10px;}
+    .support h2{font-size: 16px;}
+    .support p{font-size: 10px;}
+    .support span{font-size: 12px; left: 15%;}
+    .support img{width: 25%;}
+
+    .footer{padding: 0 20px;}
+    .footer_info{width: 40%;}
+    .footer_info > h3, .footer_info > p, .footer_links a{font-size: 10px;}
+    .footer_icons{padding-top: 0;}
+    .footer_icons i{font-size: 16px;}
+    .footer_links{width: 20%;}
+    .footer_links p, .footer_download p{font-size: 12px;}
+    .footer_download > div{flex-direction: column;}
+    .footer_download{width: 20%;}
+    .footer_download img{width: 80%;}
+}
+
+
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+
+    .grid-container{grid-template-rows: 80px 800px 600px 1100px 850px 850px 170px 200px;}
+
+    .navbar{justify-content: space-between; margin-right: 50px;}
+    .navbar_navlink{display: none;}
+    .navbar_btn{display: none;}
+    .darmanito_logo{padding-left: 0;}
+    .darmanito_logo h3{font-size: 14px;}
+    .darmanito_logo p{font-size: 10px; margin-top: -5px;}
+    /*Overlay navigation menu*/
+    .navbar_menu {
+        display: initial;
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-y: scroll;
+        transition: 0.5s;
+    }
+    .navbar_menu > a{
+        position: absolute;
+        top:10%;
+        left: 10%;
+    }
+    .menu_logo{
+        position: absolute;
+        top:10%;
+        right: 10%;
+    }
+    .menu_logo h3{margin-top: -5px;}
+    .menu_logo p{margin-top: -10px;}
+    .menu_logo a{margin-top: -8px;}
+    .menu_body {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: right;
+        margin-top: 20px;
+        padding-right: 70px;
+    }
+    .menu_body > a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #141414;
+        display: block;
+        transition: 0.3s;
+    }
+    .menu_body > a:hover {color: #2361B5;}
+    .menu_body > hr{
+        width: 100%;
+        margin: 20px 0;
+        padding-right: 0;
+    }
+    .menu_body > div{
+        display: block;
+        margin-bottom: 100px;
+    }
+    .navbar_icon{
+        display: flex;
+        cursor: pointer;
+        margin-left: 50px;
+    }
+
+    .header{flex-direction: column-reverse; justify-content: center; margin: auto;}
+    .header_appDl{padding: 0 100px 20px 100px; margin: auto}
+    .header_appDl h1{font-size: 24px; text-align: center;}
+    .header_appDl p{font-size: 14px; text-align: center;}
+    .header_appDl > div{flex-direction: column; margin: auto}
+    .header img{width: 80%; margin: auto;}
+
+    .about{flex-direction: column; padding: 0 100px;}
+    .about_content{height: auto; padding-top: 0; margin-top: -100px;}
+    .about_items{display: none;}
+    .about img{margin: auto; width: 80%;}
+    .about_description{margin-bottom: 0;}
+    .about_description h2{font-size: 16px;}
+    .about_description p{font-size: 12px;}
+
+    .service{padding: 0; margin: auto;}
+    .service > h2{font-size: 16px; padding-right: 70px;}
+    .service_body{flex-direction: column;}
+    .service_items{width: 100%;}
+    .service_items > div{margin: auto;}
+    .service_description{width:100%; margin: auto; padding: 0 100px;}
+    .step_title{font-size: 14px;}
+    .step_description, .service_steps > p{font-size: 12px;}
+    #vertical_line{right: 3.5%;}
+
+    .app{flex-direction: column;}
+    .app_body{width:100%; margin: auto; padding-top:25px ;}
+    .app_body > h1{font-size: 16px; text-align: center;}
+    .app_body > p{font-size: 12px; text-align: center;}
+    .app_body input{width: 350px; height: 55px; font-size: 12px; margin-bottom: 10px;}
+    .app_body > div{margin: auto;}
+    .app_badge a:first-child, .app_badge>span{display: none;}
+    .app_body button{width: 85px; height: 35px; margin: 0 -90px 10px 0;}
+    .app > img{margin: auto;}
+
+    .register{margin-top: 150px; flex-direction: column-reverse; justify-content: center; width: 90%; padding:30px}
+    .register img{width: 100%; padding: 0}
+    .register_body{width: 100%; padding:0 10px;}
+    .register_body p{font-size: 12px;}
+    .register_body h2{font-size: 16px;}
+    .register_body input{margin: auto; font-size: 12px; width: 350px; height: 55px;}
+    .register_body button{width: 90px; height: 35px; font-size: 12px;margin: 0;position: relative; left: 26%;}
+
+    .support{flex-direction: column;}
+    .support > div{flex-direction: column; margin: auto;}
+    .support h2{font-size: 16px; text-align: center; margin:auto}
+    .support p{font-size: 12px; text-align: center; padding-right: 0; margin: auto;}
+    .support img{position: relative; right: 3%;}
+    .support span{position: relative; bottom: 50%; right: 5%;}
+
+    .footer{margin:auto;}
+    .footer_links, .footer_download{display: none;}
+    .footer_info{width: 100%; margin:auto;}
+    .footer_icons{justify-content: center;}
+}

@@ -1,0 +1,81 @@
+@import "../lib/var";
+@import "../lib/mixins";
+
+/*Footer of the page*/
+.footer{
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+    @include flex(row, initial, initial);
+    padding: 50px 100px 0 100px;
+}
+/*Right side*/
+.footer_info{
+    @include flex(column, initial, initial);
+    width: 35%;
+}
+.footer_info > h3{
+    font-weight: bold;
+    font-size: $text2;
+}
+.footer_info > p{
+    font-size: $text2;
+    margin-top: -10px;
+}
+.footer_icons{
+    @include flex(row, initial, initial);
+    padding-top: 20px;
+}
+.footer_icons a{
+    padding-left: 25px;
+}
+.footer_icons a:last-child{
+    padding-left: 0;
+}
+.fab{
+    color: black;
+}
+.fa-linkedin-in, .fa-twitter, .fa-instagram{
+    font-size: 25px;
+    color: #b9b9b9;
+}
+/*Their real color codes*/
+.fa-linkedin-in:hover{color: #0072b1;}
+.fa-twitter:hover{color: #00acee;}
+.fa-instagram:hover{color: #C13584;}
+/*Middle column*/
+.footer_links{
+    @include flex(column, initial, initial);
+    width: 15%;
+}
+.footer_links p{
+    color: $black;
+    font-weight: bold;
+    font-size: $text1;
+}
+.footer_links a{
+    color: $black;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+.footer_links a:hover, #current{
+    color: $title-color;
+}
+/*Left side*/
+.footer_download{
+    @include flex(column, initial, initial);
+    width: 35%;
+}
+.footer_download > p{
+    font-size: $text1;
+    font-weight: bold;
+    color: $black;
+}
+.footer_download > div{
+    @include flex(row, initial, initial);
+}
+.footer_download a{
+    padding: 10px 0 0 10px;
+}
+.footer_download a:hover{
+    opacity: 0.7;
+}

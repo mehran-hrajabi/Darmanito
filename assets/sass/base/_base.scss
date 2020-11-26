@@ -1,0 +1,30 @@
+/*Font assign*/
+@font-face{
+    font-family: Yekan;
+    src: url(../font/Yekan.woff);
+}
+
+/*Whole page*/
+*{
+    font-family: Yekan;
+    font-style: normal;
+    font-weight: normal;
+    box-sizing : border-box ;
+}
+
+/*Body of the page*/
+body{
+    background-color: #f8f9fd;
+}
+
+/*All buttons*/
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+/*All links*/
+a, a:hover{
+    text-decoration: none;
+}
