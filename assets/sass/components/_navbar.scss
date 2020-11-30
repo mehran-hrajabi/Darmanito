@@ -1,66 +1,70 @@
 @import "../lib/var";
 @import "../lib/mixins";
 
+
+
 /*Navigation bar*/
-.navbar{
+.main-nav{
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
     @include flex(row, initial, center);
     margin-right: 100px;
 }
+
+
+
 /*Darmanito logo*/
-.darmanito_logo{
+.main-nav_logo{
     @include flex(row, initial, initial);
     padding-left: 80px;
+    a{
+        @include flex(initial, center, initial);
+        margin-left: 10px;
+    }
+    div{
+        @include flex(column, initial, center);
+    }
+    h3{
+        font-size: 18px;
+    }
+    p{
+        font-size: $text3;
+        /*margin-top: -20px;*/
+    }
 }
-.darmanito_logo > a{
-    @include flex(initial, center, initial);
-    margin-left: 10px;
-}
-.darmanito_logo > div{
-    @include flex(column, initial, initial);
-}
-.darmanito_logo h3{
-    font-size: 18px;
-    font-weight: bold;
-}
-.darmanito_logo p{
-    font-size: $text3;
-    margin-top: -20px;
-}
+
+
+
 /*Navigation bar links*/
-.navbar_navlink{
+.main-nav_menu{
     @include flex(initial, center, initial);
     width: 50%;
-}
-.navbar_navlink > a{
-    margin: 40px;
-    color: black;
-}
-.navbar_navlink > a:first-child{
-    margin-right: 0;
-}
-.navbar_navlink > a:last-child{
-    margin-left: 0;
-}
-.navbar_navlink > a:hover{
-    color: $secondary-color;
-}
+    a{
+        margin: 40px;
+        &:first-child{margin-right: 0;}
+        &:last-child{margin-left: 0;}
+    }
+    }
+
+
+
 /*Button in the left side of the navigation bar*/
-.navbar_btn{
+.main-nav_btn{
     @include flex(initial, center,center);
     width: 30%;
-}
-.navbar_btn > button{
-    font-weight: bold;
-    font-size: $text1;
-    border-radius: 10px;
-    color: $secondary-color;
-    background-color: #E6F3FF;
-    width: 170px;
-    height: 50px;
-}
-.navbar_btn > button:hover{
-    background-color: #C3E1FE;
-    transition-duration: 0.5s;
+    button{
+        font-weight: bold;
+        font-size: $text1;
+        border-radius: 10px;
+        color: $secondary-color;
+        background-color: #E6F3FF;
+        width: 170px;
+        height: 50px;
+        outline: none;
+        border: none;
+        &:hover{
+            background-color: #C3E1FE;
+            transition-duration: 0.5s;
+        }
+    }
 }

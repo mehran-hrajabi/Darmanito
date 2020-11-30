@@ -1,3 +1,4 @@
+@import "../lib/var";
 /*Font assign*/
 @font-face{
     font-family: Yekan;
@@ -17,14 +18,18 @@ body{
     background-color: #f8f9fd;
 }
 
-/*All buttons*/
-button{
-    cursor: pointer;
-    outline: none;
-    border: none;
-}
-
 /*All links*/
-a, a:hover{
-    text-decoration: none;
+a{color: black;}
+a:hover{color: $secondary-color;}
+a, a:hover{text-decoration: none;}
+
+/*All headings*/
+h1, h2, h3, h4, h5{font-weight: bold;}
+
+/*CSS default values to ovverride bootstrap*/
+p, h1, h2, h3, h4, h5, a{
+    text-align: right;
+    line-height: initial;
+    margin: initial;
+    padding: initial;
 }

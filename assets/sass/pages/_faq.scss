@@ -5,3 +5,69 @@
     grid-template-columns: 100%;
     grid-template-rows: 100px 120px 900px 130px 350px;
 }
+
+
+
+/*Header of the page*/
+.faq-header{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    background-color: $primary-color;
+    color: white;
+    h1{font-size: $header2;}
+}
+
+
+
+.faq-body{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    > h4{
+        font-size: $header3;
+        color: $title-color;
+    }
+}
+.faq-items{
+    > div{
+        position: relative;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    img{
+        border-radius: 25px;
+        box-shadow: 0 10px 20px 10px rgb(114, 190, 255, 0.1);
+    }
+    .item-title{
+        position: absolute;
+        cursor: pointer;
+        color: $title-color;
+        bottom: 25%;
+        right: 38%;
+    }
+    #alignment_exception1{right: 35%;}
+    #alignment_exception2{right: 30%;}
+    .badge-secondary{
+        font-size: $text3;
+        background-color: $label;
+        color: black;
+        position: absolute;
+        top: 15%;
+        right: 37%;
+        width: 65px;
+        height: 25px;
+    }
+    #pharmacyItem{opacity: 1;}
+}
+.faq-questions{
+    h5{
+        font-size: $text1;
+        color: $title-color;
+    }
+    img{
+        cursor: pointer;
+    }
+    p{
+        font-size: $text2;
+    }
+}
+#shop{display: none;}

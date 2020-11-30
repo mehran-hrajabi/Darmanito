@@ -1,3 +1,5 @@
+/*Color variables*/
+/*Font size variables*/
 /*Font assign*/
 @font-face {
   font-family: Yekan;
@@ -16,23 +18,37 @@ body {
   background-color: #f8f9fd;
 }
 
-/*All buttons*/
-button {
-  cursor: pointer;
-  outline: none;
-  border: none;
+/*All links*/
+a {
+  color: black;
 }
 
-/*All links*/
+a:hover {
+  color: #1894FF;
+}
+
 a, a:hover {
   text-decoration: none;
+}
+
+/*All headings*/
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+/*CSS default values to ovverride bootstrap*/
+p, h1, h2, h3, h4, h5, a {
+  text-align: right;
+  line-height: initial;
+  margin: initial;
+  padding: initial;
 }
 
 /*Color variables*/
 /*Font size variables*/
 /*Flex mixin*/
 /*Navigation bar*/
-.navbar {
+.main-nav {
   grid-column: 1/span 1;
   grid-row: 1/span 1;
   display: flex;
@@ -43,75 +59,61 @@ a, a:hover {
 }
 
 /*Darmanito logo*/
-.darmanito_logo {
+.main-nav_logo {
   display: flex;
   flex-direction: row;
   align-items: initial;
   justify-content: initial;
   padding-left: 80px;
 }
-
-.darmanito_logo > a {
+.main-nav_logo a {
   display: flex;
   flex-direction: initial;
   align-items: center;
   justify-content: initial;
   margin-left: 10px;
 }
-
-.darmanito_logo > div {
+.main-nav_logo div {
   display: flex;
   flex-direction: column;
   align-items: initial;
-  justify-content: initial;
+  justify-content: center;
 }
-
-.darmanito_logo h3 {
+.main-nav_logo h3 {
   font-size: 18px;
-  font-weight: bold;
 }
-
-.darmanito_logo p {
+.main-nav_logo p {
   font-size: 12px;
-  margin-top: -20px;
+  /*margin-top: -20px;*/
 }
 
 /*Navigation bar links*/
-.navbar_navlink {
+.main-nav_menu {
   display: flex;
   flex-direction: initial;
   align-items: center;
   justify-content: initial;
   width: 50%;
 }
-
-.navbar_navlink > a {
+.main-nav_menu a {
   margin: 40px;
-  color: black;
 }
-
-.navbar_navlink > a:first-child {
+.main-nav_menu a:first-child {
   margin-right: 0;
 }
-
-.navbar_navlink > a:last-child {
+.main-nav_menu a:last-child {
   margin-left: 0;
 }
 
-.navbar_navlink > a:hover {
-  color: #1894FF;
-}
-
 /*Button in the left side of the navigation bar*/
-.navbar_btn {
+.main-nav_btn {
   display: flex;
   flex-direction: initial;
   align-items: center;
   justify-content: center;
   width: 30%;
 }
-
-.navbar_btn > button {
+.main-nav_btn button {
   font-weight: bold;
   font-size: 16px;
   border-radius: 10px;
@@ -119,9 +121,10 @@ a, a:hover {
   background-color: #E6F3FF;
   width: 170px;
   height: 50px;
+  outline: none;
+  border: none;
 }
-
-.navbar_btn > button:hover {
+.main-nav_btn button:hover {
   background-color: #C3E1FE;
   transition-duration: 0.5s;
 }
@@ -139,7 +142,6 @@ a, a:hover {
   align-items: center;
   justify-content: space-between;
 }
-
 .support > div {
   display: flex;
   flex-direction: row;
@@ -147,26 +149,24 @@ a, a:hover {
   justify-content: initial;
   margin: 0 110px;
 }
-
 .support h2, .support p, .support span {
   color: white;
 }
-
 .support h2 {
-  font-weight: bold;
   font-size: 20px;
+  margin: initial;
+  /*Override bootstrap*/
 }
-
 .support p {
   font-size: 14px;
   padding-right: 50px;
+  margin: initial;
+  /*Override bootstrap*/
 }
-
 .support img {
   position: absolute;
   left: 10%;
 }
-
 .support span {
   position: absolute;
   font-size: 16px;
@@ -185,7 +185,7 @@ a, a:hover {
   flex-direction: row;
   align-items: initial;
   justify-content: initial;
-  padding: 50px 100px 0 100px;
+  padding: 80px 100px 0 100px;
 }
 
 /*Right side*/
@@ -196,15 +196,13 @@ a, a:hover {
   justify-content: initial;
   width: 35%;
 }
-
 .footer_info > h3 {
-  font-weight: bold;
   font-size: 14px;
+  padding-top: 20px;
 }
-
 .footer_info > p {
   font-size: 14px;
-  margin-top: -10px;
+  /*margin-top: -10px;*/
 }
 
 .footer_icons {
@@ -213,35 +211,25 @@ a, a:hover {
   align-items: initial;
   justify-content: initial;
   padding-top: 20px;
+  /*Their real color codes*/
 }
-
 .footer_icons a {
   padding-left: 25px;
 }
-
 .footer_icons a:last-child {
   padding-left: 0;
 }
-
-.fab {
-  color: black;
-}
-
-.fa-linkedin-in, .fa-twitter, .fa-instagram {
+.footer_icons i {
   font-size: 25px;
   color: #b9b9b9;
 }
-
-/*Their real color codes*/
-.fa-linkedin-in:hover {
+.footer_icons .fa-linkedin-in:hover {
   color: #0072b1;
 }
-
-.fa-twitter:hover {
+.footer_icons .fa-twitter:hover {
   color: #00acee;
 }
-
-.fa-instagram:hover {
+.footer_icons .fa-instagram:hover {
   color: #C13584;
 }
 
@@ -253,50 +241,39 @@ a, a:hover {
   justify-content: initial;
   width: 15%;
 }
-
 .footer_links p {
   color: #141414;
   font-weight: bold;
   font-size: 16px;
 }
-
 .footer_links a {
-  color: #141414;
   padding-left: 40px;
   padding-top: 10px;
 }
 
-.footer_links a:hover, #current {
-  color: #2361B5;
-}
-
 /*Left side*/
-.footer_download {
+.footer_badges {
   display: flex;
   flex-direction: column;
   align-items: initial;
   justify-content: initial;
   width: 35%;
 }
-
-.footer_download > p {
+.footer_badges > p {
   font-size: 16px;
   font-weight: bold;
   color: #141414;
 }
-
-.footer_download > div {
+.footer_badges > div {
   display: flex;
   flex-direction: row;
   align-items: initial;
   justify-content: initial;
 }
-
-.footer_download a {
+.footer_badges a {
   padding: 10px 0 0 10px;
 }
-
-.footer_download a:hover {
+.footer_badges a:hover {
   opacity: 0.7;
 }
 
@@ -309,6 +286,77 @@ a, a:hover {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100px 120px 900px 130px 350px;
+}
+
+/*Header of the page*/
+.faq-header {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+  background-color: #0089FF;
+  color: white;
+}
+.faq-header h1 {
+  font-size: 30px;
+}
+
+.faq-body {
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+}
+.faq-body > h4 {
+  font-size: 20px;
+  color: #2361B5;
+}
+
+.faq-items > div {
+  position: relative;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.faq-items img {
+  border-radius: 25px;
+  box-shadow: 0 10px 20px 10px rgba(114, 190, 255, 0.1);
+}
+.faq-items .item-title {
+  position: absolute;
+  cursor: pointer;
+  color: #2361B5;
+  bottom: 25%;
+  right: 38%;
+}
+.faq-items #alignment_exception1 {
+  right: 35%;
+}
+.faq-items #alignment_exception2 {
+  right: 30%;
+}
+.faq-items .badge-secondary {
+  font-size: 12px;
+  background-color: #FADB14;
+  color: black;
+  position: absolute;
+  top: 15%;
+  right: 37%;
+  width: 65px;
+  height: 25px;
+}
+.faq-items #pharmacyItem {
+  opacity: 1;
+}
+
+.faq-questions h5 {
+  font-size: 16px;
+  color: #2361B5;
+}
+.faq-questions img {
+  cursor: pointer;
+}
+.faq-questions p {
+  font-size: 14px;
+}
+
+#shop {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
