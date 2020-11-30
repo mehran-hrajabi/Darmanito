@@ -6,16 +6,22 @@
     <title>سوالات متداول</title>
     <meta charset="UTF-8" content="سوالات متداول درمانیتو">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script><!--Font Awesome 5 icons-->
     <link rel="stylesheet" type="text/css" href="assets/sass/styles.css"><!--CSS external file-->
+    <script type="text/javascript" src="assets/js/script.js"></script><!--JS external file-->
 </head>
 
-<div class="grid-container">
+<div class="grid-container" dir="rtl">
     <!--Navigation bar-->
-    <div class="navbar">
+    <div class="main-nav">
         <!--Darmanito logo-->
-        <div class="darmanito_logo">
+        <div class="main-nav_logo">
             <a href="index.html"><img src="assets/pic/navbar_icon.svg"></a>
+
             <div>
                 <h3>درمانیتو</h3>
                 <p>همراه شما در درمان</p>
@@ -23,7 +29,7 @@
         </div>
 
         <!--Navigation bar links-->
-        <div class="navbar_navlink">
+        <div class="main-nav_menu">
             <a href="index.html">صفحه اصلی</a>
             <a href="#">درباره ما</a>
             <a href="#">تماس با ما</a>
@@ -31,14 +37,159 @@
         </div>
 
         <!--Button in the left side of the navigation bar-->
-        <div class="navbar_btn">
+        <div class="main-nav_btn">
             <button type="button">دانلود درمانیتو</button>
         </div>
     </div>
 
 
 
+    <!--Header of the page-->
+    <div class="faq-header d-flex justify-content-center align-items-center">
+        <h1>سوالات متداول</h1>
+    </div>
 
+
+    
+    <div class="faq-body d-flex flex-column pt-5 mx-5">
+        <!--Main title-->
+        <h4 class="d-flex align-content-start mr-5 pr-5">سوال شما درباره کدام سرویس هست؟</h4>
+        <!--Four service items-->
+        <div class="faq-items d-flex justify-content-center align-items-center m-3 h-25">
+            <!--Pharmacy item-->
+            <div class="d-flex flex-column justify-content-center p-5" onclick="pharmacyCollapse()" id="pharmacyItem">
+                <img class="flex-fill" src="assets/pic/pharmacy_icon.svg">
+                <span class="item-title mx-auto">داروخانه</span>
+            </div>
+            <!--Shopping item-->
+            <div class="d-flex flex-column justify-content-center p-5" onclick="shoppingCollapse()" id="shopItem">
+                <img class="flex-fill" src="assets/pic/shop_icon.svg">
+                <span class="item-title mx-auto">فروشگاه</span>
+            </div>
+            <!--Online visit item-->
+            <div class="d-flex flex-column justify-content-center p-5" data-toggle="modal" data-target="#tba">
+                <span class="badge badge-pill badge-secondary px-1 mx-auto">به زودی</span>
+                <img class="flex-fill" src="assets/pic/visit_icon.svg">
+                <span id="alignment_exception1" class="item-title mx-auto">ویزیت آنلاین</span>
+            </div>
+            <!--Online reservation item-->
+            <div class="d-flex flex-column justify-content-center p-5" data-toggle="modal" data-target="#tba">
+                <span class="badge badge-pill badge-secondary px-1 mx-auto">به زودی</span>
+                <img class="flex-fill" src="assets/pic/reserve_icon.svg">
+                <span id="alignment_exception2" class="item-title mx-auto">نوبت دهی آنلاین</span>    
+            </div>
+        </div>
+
+        
+        <!--Pharmacy collapse-->
+        <div id="pharmacy">
+            <div class="faq-questions d-flex align-content-start flex-column m-5 px-5">
+                <!--First question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">هزینه ای درمانیتو برای پیدا کردن دارو دریافت می کنه؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">بله</p>
+                    </div>
+                </div>
+                <!--Second question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">هزینه ای درمانیتو برای پیدا کردن دارو دریافت می کنه؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">بله</p>
+                    </div>
+                </div>
+                <!--Third question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">درمانیتو فقط در تهران و کرج فعال هست؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">خیر. ما هم اکنون در تهران در حال فعالیت هستیم.</p>
+                    </div>
+                </div>
+                <!--Fourth question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">هزینه ای درمانیتو برای پیدا کردن دارو دریافت می کنه؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">بله</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Shopping collapse-->
+        <div id="shop">
+            <div class="faq-questions d-flex align-content-start flex-column m-5 px-5">
+                <!--First question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">آیا فروشگاه درمانیتو راه اندازی شده است؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">بله</p>
+                    </div>
+                </div>
+                <!--Second question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">آیا فروشگاه درمانیتو راه اندازی شده است؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">بله</p>
+                    </div>
+                </div>
+                <!--Third question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">امکان سفارش از فروشگاه درمانیتو فقط در تهران و کرج وجود داره؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">خیر. امکان سفارش از فروشگاه درمانیتو در سراسر کشور وجود دارد.</p>
+                    </div>
+                </div>
+                <!--Fourth question-->
+                <div class="d-flex align-content-start flex-column mt-4">
+                    <div class="d-flex flex-row align-content-start">
+                        <img src="assets/pic/plus.svg">
+                        <h5 class="pr-5">آیا فروشگاه درمانیتو راه اندازی شده است؟</h5>
+                    </div>
+                    <div>
+                        <p class="pr-5 mr-5 mt-2">بله</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Modals for two other items-->
+        <div class="modal fade" id="tba">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>این سرویس در حال حاضر در دسترس نمی باشد.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
 
 
 
@@ -48,6 +199,7 @@
             <h2>پشتیبانی درمانیتو</h2>
             <p>پاسخگویی در روزهای کاری از 9 صبح تا 9 شب</p>
         </div>
+
         <div>
             <img src="assets/pic/support_icon.svg">
             <span>پشتیبانی : ۰۲۱۴۴۲۱۹۶۷۱</span>
@@ -60,13 +212,15 @@
     <div class="footer">
         <!--Right side-->
         <div class="footer_info">
-            <div class="darmanito_logo">
+            <div class="main-nav_logo">
                 <a href="index.html"><img src="assets/pic/navbar_icon.svg"></a>
+
                 <div>
                     <h3>درمانیتو</h3>
                     <p>همراه شما در درمان</p>
                 </div>
             </div>
+
             <h3>سوپر اپلیکیشن حوزه درمان و سلامت</h3>
             <p>تمام حقوق مادی و معنوی این وبسایت متعلق به درمانیتو است.</p>
 
@@ -80,7 +234,8 @@
         <!--Middle column-->
         <div class="footer_links">
             <p>خدمات درمانیتو</p>
-            <a href="#" id="current">داروخانه آنلاین</a>
+
+            <a href="#">داروخانه آنلاین</a>
             <a href="#">فروشگاه آنلاین</a>
             <a href="#">ویزیت آنلاین</a>
             <a href="#">پرونده پزشکی</a>
@@ -88,6 +243,7 @@
 
         <div class="footer_links">
             <p>صفحات درمانیتو</p>
+
             <a href="#">تماس با ما</a>
             <a href="#">درباره ما</a>
             <a href="#">سوالات متداول</a>
@@ -95,7 +251,7 @@
         </div>
 
         <!--Left side-->
-        <div class="footer_download">
+        <div class="footer_badges">
             <p>دانلود درمانیتو</p>
 
             <div>
@@ -104,13 +260,7 @@
             </div>
         </div>
     </div>
-
-
-
 </div>
-
-
-
 
 </body>
 </html>
