@@ -12,7 +12,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script><!--Font Awesome 5 icons-->
     <link rel="stylesheet" type="text/css" href="assets/sass/styles.css"><!--CSS external file-->
-    <script type="text/javascript" src="assets/js/script.js"></script><!--JS external file-->
 </head>
 
 <div class="grid-container" dir="rtl">
@@ -57,12 +56,12 @@
         <!--Four service items-->
         <div class="faq-items d-flex justify-content-center align-items-center m-3 h-25">
             <!--Pharmacy item-->
-            <div class="d-flex flex-column justify-content-center p-5" onclick="pharmacyCollapse()" id="pharmacyItem">
+            <div class="d-flex flex-column justify-content-center p-5" id="pharmacyItem">
                 <img class="flex-fill" src="assets/pic/pharmacy_icon.svg">
                 <span class="item-title mx-auto">داروخانه</span>
             </div>
             <!--Shopping item-->
-            <div class="d-flex flex-column justify-content-center p-5" onclick="shoppingCollapse()" id="shopItem">
+            <div class="d-flex flex-column justify-content-center p-5" id="shopItem">
                 <img class="flex-fill" src="assets/pic/shop_icon.svg">
                 <span class="item-title mx-auto">فروشگاه</span>
             </div>
@@ -85,45 +84,49 @@
         <div id="pharmacy">
             <div class="faq-questions d-flex align-content-start flex-column m-5 px-5">
                 <!--First question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q1" value="0" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">هزینه ای درمانیتو برای پیدا کردن دارو دریافت می کنه؟</h5>
                     </div>
-                    <div>
+                    <div id="pharmacyA1">
                         <p class="pr-5 mr-5 mt-2">بله</p>
                     </div>
                 </div>
+                <hr class="w-100">
                 <!--Second question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q2" value="1" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">هزینه ای درمانیتو برای پیدا کردن دارو دریافت می کنه؟</h5>
                     </div>
-                    <div>
+                    <div id="pharmacyA2">
                         <p class="pr-5 mr-5 mt-2">بله</p>
                     </div>
                 </div>
+                <hr class="w-100">
                 <!--Third question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q3" value="2" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">درمانیتو فقط در تهران و کرج فعال هست؟</h5>
                     </div>
-                    <div>
+                    <div id="pharmacyA3">
                         <p class="pr-5 mr-5 mt-2">خیر. ما هم اکنون در تهران در حال فعالیت هستیم.</p>
                     </div>
                 </div>
+                <hr class="w-100">
                 <!--Fourth question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q4" value="3" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">هزینه ای درمانیتو برای پیدا کردن دارو دریافت می کنه؟</h5>
                     </div>
-                    <div>
+                    <div id="pharmacyA4">
                         <p class="pr-5 mr-5 mt-2">بله</p>
                     </div>
                 </div>
+                <hr class="w-100">
             </div>
         </div>
 
@@ -131,46 +134,51 @@
         <!--Shopping collapse-->
         <div id="shop">
             <div class="faq-questions d-flex align-content-start flex-column m-5 px-5">
+                
                 <!--First question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q5" value="4" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">آیا فروشگاه درمانیتو راه اندازی شده است؟</h5>
                     </div>
-                    <div>
+                    <div id="shopA1">
                         <p class="pr-5 mr-5 mt-2">بله</p>
                     </div>
                 </div>
+                <hr class="w-100">
                 <!--Second question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q6" value="5" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">آیا فروشگاه درمانیتو راه اندازی شده است؟</h5>
                     </div>
-                    <div>
+                    <div id="shopA2">
                         <p class="pr-5 mr-5 mt-2">بله</p>
                     </div>
                 </div>
+                <hr class="w-100">
                 <!--Third question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q7" value="6" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">امکان سفارش از فروشگاه درمانیتو فقط در تهران و کرج وجود داره؟</h5>
                     </div>
-                    <div>
+                    <div id="shopA3">
                         <p class="pr-5 mr-5 mt-2">خیر. امکان سفارش از فروشگاه درمانیتو در سراسر کشور وجود دارد.</p>
                     </div>
                 </div>
+                <hr class="w-100">
                 <!--Fourth question-->
-                <div class="d-flex align-content-start flex-column mt-4">
-                    <div class="d-flex flex-row align-content-start">
-                        <img src="assets/pic/plus.svg">
+                <div class="d-flex align-content-start flex-column">
+                    <div class="d-flex flex-row align-content-start mr-2">
+                        <img id="Q8" value="7" src="assets/pic/plus.svg" onclick="showAnswer(this.getAttribute('value'))">
                         <h5 class="pr-5">آیا فروشگاه درمانیتو راه اندازی شده است؟</h5>
                     </div>
-                    <div>
+                    <div id="shopA4">
                         <p class="pr-5 mr-5 mt-2">بله</p>
                     </div>
                 </div>
+                <hr class="w-100">
             </div>
         </div>
 
@@ -262,5 +270,6 @@
     </div>
 </div>
 
+<script type="text/javascript" src="assets/js/script.js"></script><!--JS external file-->
 </body>
 </html>

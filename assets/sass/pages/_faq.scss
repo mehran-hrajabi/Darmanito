@@ -56,7 +56,7 @@
         width: 65px;
         height: 25px;
     }
-    #pharmacyItem{opacity: 1;}
+    
 }
 .faq-questions{
     h5{
@@ -70,4 +70,10 @@
         font-size: $text2;
     }
 }
+
+/*Classes and ids for dom manipulation*/
+#pharmacyItem{opacity: 1;}
 #shop{display: none;}
+#pharmacyA1, #pharmacyA2, #pharmacyA3, #pharmacyA4{display: none;}
+#shopA1, #shopA2, #shopA3, #shopA4{display: none;}
+

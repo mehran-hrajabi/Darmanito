@@ -340,9 +340,6 @@ p, h1, h2, h3, h4, h5, a {
   width: 65px;
   height: 25px;
 }
-.faq-items #pharmacyItem {
-  opacity: 1;
-}
 
 .faq-questions h5 {
   font-size: 16px;
@@ -355,7 +352,20 @@ p, h1, h2, h3, h4, h5, a {
   font-size: 14px;
 }
 
+/*Classes and ids for dom manipulation*/
+#pharmacyItem {
+  opacity: 1;
+}
+
 #shop {
+  display: none;
+}
+
+#pharmacyA1, #pharmacyA2, #pharmacyA3, #pharmacyA4 {
+  display: none;
+}
+
+#shopA1, #shopA2, #shopA3, #shopA4 {
   display: none;
 }
 
