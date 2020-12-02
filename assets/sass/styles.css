@@ -369,4 +369,91 @@ p, h1, h2, h3, h4, h5, a {
   display: none;
 }
 
+/*Color variables*/
+/*Font size variables*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 120px 750px 130px 350px;
+}
+
+/*Header of the page*/
+.contact-header {
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+  background-color: #0089FF;
+  color: white;
+}
+.contact-header h1 {
+  font-size: 30px;
+}
+
+/*Right side : Contact form*/
+.form-basic, #red_box, #green_box, #message, #name, #email_phone, .btn {
+  width: 450px;
+  border-radius: 10px;
+}
+
+#name, #email_phone, .btn {
+  height: 50px;
+}
+
+#message {
+  height: 150px;
+}
+
+label {
+  font-size: 12px;
+}
+
+::placeholder {
+  font-size: 14px;
+  color: #C7C7C7;
+}
+
+.btn {
+  background-color: white;
+  color: #1894FF;
+  font-size: 16px;
+  border: 1px solid #1894FF;
+}
+.btn:hover {
+  color: #1894FF;
+  background-color: #C3E1FE;
+  transition-duration: 0.5s;
+}
+
+#red_box, #green_box {
+  display: none;
+  font-size: 14px;
+}
+
+#red_box {
+  border: 2px solid red;
+}
+
+#green_box {
+  border: 2px solid green;
+}
+
+/*Left side*/
+iframe {
+  width: 600px;
+  height: 450px;
+}
+
+.contact-info {
+  position: relative;
+  bottom: 30%;
+  background-color: white;
+  border-radius: 10px;
+}
+.contact-info p {
+  font-size: 16px;
+}
+.contact-info .contact-blue {
+  color: #1894FF;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=styles.css.map */

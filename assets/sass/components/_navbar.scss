@@ -63,7 +63,7 @@
         outline: none;
         border: none;
         &:hover{
-            background-color: #C3E1FE;
+            background-color: $btn-hover;
             transition-duration: 0.5s;
         }
     }
