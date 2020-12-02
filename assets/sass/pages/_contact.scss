@@ -1,0 +1,77 @@
+@import "../lib/var";
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 120px 750px 130px 350px;
+}
+
+
+
+/*Header of the page*/
+.contact-header{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    background-color: $primary-color;
+    color: white;
+    h1{font-size: $header2;}
+}
+
+
+
+/*Right side : Contact form*/
+.form-basic{
+    width: 450px;
+    border-radius: 10px;
+}
+#name, #email_phone, .btn{
+    @extend .form-basic;
+    height: 50px;
+}
+#message{
+    @extend .form-basic;
+    height: 150px;
+}
+label{font-size: $text3;}
+::placeholder{
+    font-size: $text2;
+    color: $placeholder-color;
+}
+.btn{
+    background-color: white;
+    color: $secondary-color;
+    font-size: $text1;
+    border: 1px solid $secondary-color;
+    &:hover{
+        color: $secondary-color;
+        background-color: $btn-hover;
+        transition-duration: 0.5s;
+    }
+}
+#red_box, #green_box{
+    @extend .form-basic;
+    display: none;
+    font-size: $text2;
+}
+#red_box{
+    border: 2px solid red;
+}
+#green_box{
+    border: 2px solid green;
+}
+/*Left side*/
+iframe{
+    width: 600px;
+    height: 450px;
+}
+.contact-info{
+    position: relative;
+    bottom: 30%;
+    background-color: white;
+    border-radius: 10px;
+    p{font-size: $text1;}
+    .contact-blue{
+        color: $secondary-color;
+        font-weight: bold;
+    }
+}
