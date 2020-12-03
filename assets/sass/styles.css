@@ -15,7 +15,7 @@
 
 /*Body of the page*/
 body {
-  background-color: #f8f9fd;
+  background-color: white;
 }
 
 /*All links*/
@@ -282,7 +282,7 @@ p, h1, h2, h3, h4, h5, a {
 /*Flex mixin*/
 /*Color variables*/
 /*Font size variables*/
-.grid-container {
+.faq-grid {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100px 120px 900px 130px 350px;
@@ -454,6 +454,157 @@ iframe {
 .contact-info .contact-blue {
   color: #1894FF;
   font-weight: bold;
+}
+
+/*Color variables*/
+/*Font size variables*/
+.grid-membership {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 650px 150px 850px 130px 350px;
+}
+
+/*Information about membership*/
+.membership-info h1 {
+  color: #1894FF;
+  font-size: 30px;
+}
+.membership-info p {
+  font-size: 16px;
+}
+.membership-info input {
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 500px;
+  height: 65px;
+  padding: 20px;
+  outline: none;
+  border: none;
+}
+.membership-info .btn {
+  font-size: 16px;
+  background-color: #1894FF;
+  border-radius: 10px;
+  color: white;
+  width: 130px;
+  height: 45px;
+  margin-right: -145px;
+}
+.membership-info .btn:hover {
+  opacity: 0.8;
+}
+
+/*Left side of the element*/
+.membership-sample > div {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px 10px rgba(114, 190, 255, 0.1);
+}
+.membership-sample > div:last-child {
+  opacity: 0.7;
+  margin-right: 200px;
+}
+.membership-sample .sample-big {
+  width: 438px;
+  height: 125px;
+}
+.membership-sample .sample-big h4 {
+  font-size: 20px;
+}
+.membership-sample .sample-big p {
+  font-size: 12px;
+}
+.membership-sample .sample-big > img {
+  width: 75px;
+  height: 75px;
+}
+.membership-sample .sample-big > span {
+  font-size: 12px;
+  background-color: #1894FF;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: -70px;
+}
+.membership-sample .sample-small {
+  width: 305px;
+  height: 85px;
+}
+.membership-sample .sample-small h4 {
+  font-size: 13px;
+}
+.membership-sample .sample-small p {
+  font-size: 8px;
+}
+.membership-sample .sample-small > img {
+  width: 50px;
+  height: 50px;
+}
+.membership-sample .sample-small > span {
+  font-size: 8px;
+  background-color: #1894FF;
+  width: 55px;
+  height: 20px;
+  border-radius: 10px;
+  margin-top: -10px;
+}
+
+/*Membership statistics - Blue part*/
+.membership-stat {
+  grid-column: 1/span 1;
+  grid-row: 3/span 1;
+  background-color: #0089FF;
+  color: white;
+}
+.membership-stat p {
+  font-size: 16px;
+}
+.membership-stat h1 {
+  font-size: 36px;
+}
+
+/*Membership services*/
+.membership-service {
+  grid-column: 1/span 1;
+  grid-row: 4/span 1;
+}
+.membership-service h4 {
+  color: #2361B5;
+  font-size: 20px;
+}
+.membership-service p {
+  font-size: 16px;
+}
+.membership-service .btn {
+  border-radius: 10px;
+  color: white;
+  background-color: #1894FF;
+  font-size: 16px;
+  width: 170px;
+  height: 50px;
+}
+.membership-service .btn:hover {
+  opacity: 0.8;
+}
+.membership-service img {
+  width: 140px;
+  height: 160px;
+}
+.membership-service .membership-cards > div {
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 10px 20px 10px rgba(114, 190, 255, 0.1);
+  width: 450px;
+  height: 500px;
+}
+
+/*Different support and footer section*/
+.support-exception {
+  grid-row: 5/span 1;
+}
+
+.footer-exception {
+  grid-row: 6/span 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
