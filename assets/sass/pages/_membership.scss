@@ -1,15 +1,23 @@
 @import "../lib/var";
 
-.grid-membership{
+.membership-grid{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100px 650px 150px 850px 130px 350px;
 }
+/*Different support and footer section*/
+.support-exception{grid-row: 5 / span 1;}
+.footer-exception{grid-row: 6 / span 1;}
 
 
 
 /*Information about membership*/
-.membership-info{
+.membership-header{
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
     h1{
         color: $secondary-color;
         font-size: $header2;
@@ -38,6 +46,7 @@
 }
 /*Left side of the element*/
 .membership-sample{
+    margin-left: 50px;
     > div{
         border-radius: 20px;
         box-shadow: 0 10px 20px 10px rgb(114, 190, 255, 0.1);
@@ -62,6 +71,7 @@
             height: 30px;
             border-radius: 10px;
             margin-top: -70px;
+            padding-top: 8px;
         }
     }
     .sample-small{
@@ -94,6 +104,10 @@
     color: white;
     p{font-size: $text1;}
     h1{font-size: $header1;}
+    > div{
+        &:first-child{margin-right: 100px;}
+        &:last-child{margin-left: 100px;}
+    }
 }
 
 
@@ -102,6 +116,8 @@
 .membership-service{
     grid-column: 1 / span 1;
     grid-row: 4 / span 1;
+    margin: 50px;
+    padding: 50px;
     h4{
         color: $title-color;
         font-size: $header3;
@@ -123,6 +139,7 @@
         height: 160px;
     }
     .membership-cards{
+        padding-top: 50px;
         >div{
             border: none;
             border-radius: 40px;
@@ -135,6 +152,108 @@
 
 
 
-/*Different support and footer section*/
-.support-exception{grid-row: 5 / span 1;}
-.footer-exception{grid-row: 6 / span 1;}
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .membership-service{
+        .membership-cards{
+            > div {
+                &:first-child{margin-left: 15px;}
+                &:last-child{margin-right: 15px;}
+            }
+        }
+    }
+}
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .membership-grid{grid-template-rows: 100px 750px 100px 850px 100px 200px;}
+
+    .membership-header-container{
+        @include flex (column-reverse, initial, center);
+        .membership-header{
+            @include flex(column, initial, center);
+            margin: auto;
+            width: 100%;
+            padding: 20px;
+            h1{font-size: $header3;}
+            p{font-size: $text2;}
+            input{width: 300px; height: 40px; font-size: $text2;}
+            .btn{width: 80px; height: 30px; font-size: $text3; padding:0; margin-right: -90px;}
+        }
+    }
+    .membership-stat{
+        p{font-size: $text2;}
+        h1{font-size: $header2;}
+    }
+    .membership-service{
+        padding-top: 50px;
+        margin: 0;
+        h4{font-size: $text1;}
+        p{font-size: $text2;}
+        .btn{width: 110px; height: 35px;}
+        .membership-cards{
+            > div{
+                min-width: 250px;
+                &:first-child{margin-left: 20px;}
+                &:last-child{margin-right: 20px;}
+            }
+        }
+    }
+}
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .membership-grid{grid-template-rows: 100px 600px 300px 1300px 170px 200px;}
+
+    .membership-header-container{
+        @include flex(column-reverse, center, center);
+        .membership-header{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            h1{font-size: $header3;}
+            p{font-size: $text2;}
+            input{font-size: $text2; width: 350px; height: 55px; padding: 15px;}
+            .btn{font-size: $text3; width: 90px; height: 40px; margin-right: -100px;}
+        }
+    }
+    .membership-sample{
+        margin: auto;
+        .sample-small{display: none;}
+        .sample-big{
+            margin: auto;
+            width: 350px;
+            height: 100px;
+            h4{font-size: $text1;}
+            p{font-size: $small;}
+            > img{width: 50px; height: 50px;}
+            > span{font-size: $small; width: 60px; height: 20px; padding-top: 5px;}
+        }
+    }
+    .membership-stat{
+        @include flex(column, center, center);
+        > div{
+            &:first-child{margin-right: 0;}
+            &:last-child{margin-left: 0;}
+        }
+        h1{font-size: $header2;}
+        p{font-size: $text2;}
+    }
+    .membership-service{
+        margin: 10px;
+        padding: 10px;
+        h4{font-size: $text1;}
+        p{font-size: $text3;}
+        .membership-cards{
+            @include flex(column, center, center);
+            >div{
+                max-height: 500px;
+                max-width: 400px;
+                margin-top: 20px;
+            }
+            
+        }
+    }
+}

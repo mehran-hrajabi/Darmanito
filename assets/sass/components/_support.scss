@@ -14,12 +14,10 @@
     h2, p, span{color: white;}
     h2{
         font-size: $header3;
-        margin: initial; /*Override bootstrap*/
     }
     p{
         font-size: $text2;
         padding-right: 50px;
-        margin:initial; /*Override bootstrap*/
     }
     img{
         position: absolute;
@@ -30,5 +28,40 @@
         font-size: $text1;
         font-weight: bold;
         left:13%;
+    }
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .support{
+        h2{font-size: $text1;}
+        p{font-size: $text3;}
+    }
+}
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .support{
+        > div{margin: 0 80px;}
+        h2{font-size: $text1;}
+        p{font-size: $text3;}
+        span{font-size: $text3; left: 15%;}
+        img{width: 25%;}
+    }
+}
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .support{
+        @include flex(column, center, center);
+        > div{@include flex(column, initial, initial); margin: auto;}
+        h2{font-size: $text1; text-align: center; margin: auto;}
+        p{font-size: $text3; text-align: center; padding-right: 0; margin: auto;}
+        img{position: relative; right: 3%;}
+        span{position: relative; bottom: 50%; left: 10%;}
     }
 }

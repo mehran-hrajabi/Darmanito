@@ -39,7 +39,41 @@
         <div class="main-nav_btn">
             <button type="button">دانلود درمانیتو</button>
         </div>
+
+        <!--Overlay navigation menu for mobile version-->
+        <div id="menu" class="hamburger_menu">
+            <div class="menu_logo">
+                <div class="main-nav_logo">
+                    <a href="index.html"><img src="assets/pic/navbar_icon.svg"></a>
+                    <div>
+                        <h3>درمانیتو</h3>
+                        <p>همراه شما در درمان</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" onclick="closeMenu()"><img src="assets/pic/close_btn.svg"></a>
+
+            <div class="hamburger_body">
+                <a href="index.html">صفحه اصلی</a>
+                <a href="membership.html">عضویت در داروخانه ها</a>
+                <a href="#">درباره ما</a>
+                <a href="contact.html">تماس با ما</a>
+                <a href="faq.html">سوالات متداول</a>
+                <a href="#">قوانین و شرایط</a>
+                <hr>
+                <div class="main-nav_btn">
+                    <button type="button">دانلود درمانیتو</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger_icon">
+            <img src="assets/pic/menu_icon.svg" onclick="openMenu()">
+        </div>
     </div>
+
+    
 
 
 
@@ -50,29 +84,29 @@
 
 
     
-    <div class="faq-body d-flex flex-column pt-5 mx-5">
+    <div class="faq-body d-flex flex-column">
         <!--Main title-->
-        <h4 class="d-flex align-content-start mr-5 pr-5">سوال شما درباره کدام سرویس هست؟</h4>
+        <h4 class="d-flex align-content-start">سوال شما درباره کدام سرویس هست؟</h4>
         <!--Four service items-->
-        <div class="faq-items d-flex justify-content-center align-items-center m-3 h-25">
+        <div class="faq-items d-flex justify-content-center align-items-center h-25">
             <!--Pharmacy item-->
-            <div class="d-flex flex-column justify-content-center p-5" id="pharmacyItem">
+            <div class="d-flex flex-column justify-content-center" id="pharmacyItem">
                 <img class="flex-fill" src="assets/pic/pharmacy_icon.svg">
                 <span class="item-title mx-auto">داروخانه</span>
             </div>
             <!--Shopping item-->
-            <div class="d-flex flex-column justify-content-center p-5" id="shopItem">
+            <div class="d-flex flex-column justify-content-center" id="shopItem">
                 <img class="flex-fill" src="assets/pic/shop_icon.svg">
                 <span class="item-title mx-auto">فروشگاه</span>
             </div>
             <!--Online visit item-->
-            <div class="d-flex flex-column justify-content-center p-5" data-toggle="modal" data-target="#tba">
+            <div class="tba d-flex flex-column justify-content-center" data-toggle="modal" data-target="#tba">
                 <span class="badge badge-pill badge-secondary px-1 mx-auto">به زودی</span>
                 <img class="flex-fill" src="assets/pic/visit_icon.svg">
                 <span id="alignment_exception1" class="item-title mx-auto">ویزیت آنلاین</span>
             </div>
             <!--Online reservation item-->
-            <div class="d-flex flex-column justify-content-center p-5" data-toggle="modal" data-target="#tba">
+            <div class="tba d-flex flex-column justify-content-center" data-toggle="modal" data-target="#tba">
                 <span class="badge badge-pill badge-secondary px-1 mx-auto">به زودی</span>
                 <img class="flex-fill" src="assets/pic/reserve_icon.svg">
                 <span id="alignment_exception2" class="item-title mx-auto">نوبت دهی آنلاین</span>    
@@ -82,7 +116,7 @@
         
         <!--Pharmacy collapse-->
         <div id="pharmacy">
-            <div class="faq-questions d-flex align-content-start flex-column m-5 px-5">
+            <div class="faq-questions d-flex align-content-start flex-column">
                 <!--First question-->
                 <div class="d-flex align-content-start flex-column">
                     <div class="d-flex flex-row align-content-start mr-2">
@@ -133,7 +167,7 @@
 
         <!--Shopping collapse-->
         <div id="shop">
-            <div class="faq-questions d-flex align-content-start flex-column m-5 px-5">
+            <div class="faq-questions d-flex align-content-start flex-column">
                 
                 <!--First question-->
                 <div class="d-flex align-content-start flex-column">

@@ -19,19 +19,26 @@
 
 
 
+/*Main body*/
 .faq-body{
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
+    padding-top: 50px;
+    margin: 0 50px;
     > h4{
         font-size: $header3;
         color: $title-color;
+        padding-right: 100px;
     }
 }
+/*four items*/
 .faq-items{
+    padding: 30px;
     > div{
         position: relative;
         opacity: 0.3;
         cursor: pointer;
+        padding: 50px;
     }
     img{
         border-radius: 25px;
@@ -58,18 +65,19 @@
     }
     
 }
+/*Four questions*/
 .faq-questions{
+    padding: 0 50px;
+    margin: 50px;
     h5{
         font-size: $text1;
         color: $title-color;
     }
-    img{
-        cursor: pointer;
-    }
-    p{
-        font-size: $text2;
-    }
+    img{cursor: pointer;}
+    p{font-size: $text2;}
 }
+
+
 
 /*Classes and ids for dom manipulation*/
 #pharmacyItem{opacity: 1;}
@@ -77,3 +85,53 @@
 #pharmacyA1, #pharmacyA2, #pharmacyA3, #pharmacyA4{display: none;}
 #shopA1, #shopA2, #shopA3, #shopA4{display: none;}
 
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    /*Everything seems all right!*/
+}
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .faq-grid{grid-template-rows: 100px 100px 900px 100px 200px;}
+
+    .faq-header{h1{font-size: $header3;}}
+
+    .faq-items{
+        > div{padding: 15px;}
+        .badge-secondary{
+            top: 0;
+            right: 37%;
+        }
+    }
+}
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .faq-grid{grid-template-rows: 100px 100px 650px 170px 200px;}
+
+    .faq-header{h1{font-size: $header3;}}
+
+    .faq-body{
+        padding-top: 10px;
+        margin: 0 10px;
+        > h4{font-size: $text1; padding-right: 10px;}
+    }
+
+    .faq-items{
+        padding: 10px;
+        > div{padding: 20px;}
+    }
+
+    .faq-questions{
+        padding: 10px;
+        margin: 10px;
+        h5{font-size: $text3;}
+        p{font-size: $text3;}
+    }
+    
+    .tba{display: none !important;}
+}

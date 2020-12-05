@@ -1,6 +1,6 @@
 @import "../lib/var";
 
-.grid-container{
+.contact-grid{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100px 120px 750px 130px 350px;
@@ -20,6 +20,12 @@
 
 
 /*Right side : Contact form*/
+.contact-body{
+    margin: 50px 120px 50px 50px;
+    >div{
+        margin-top: 50px;
+    }
+}
 .form-basic{
     width: 450px;
     border-radius: 10px;
@@ -74,4 +80,63 @@ iframe{
         color: $secondary-color;
         font-weight: bold;
     }
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .contact-body{margin: 50px;}
+    iframe{width: 450px;}
+    .contact-info{bottom: 40%;}
+}
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .contact-grid{grid-template-rows: 100px 100px 1200px 100px 200px;}
+
+    .contact-header{h1{font-size: $header3;}}
+
+    .contact-body{
+        @include flex(column-reverse, center, center);
+        .contact-body{
+            margin: auto;
+            >div{margin: auto}
+        }
+    }
+
+    .contact-info{
+        bottom: 35%;
+        p{font-size: $text2;}
+    }
+    ::placeholder{font-size: $text3;}
+    .btn{font-size: $text2;}
+}
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .contact-grid{grid-template-rows: 100px 100px 1050px 170px 200px;}
+
+    .contact-body{
+        @include flex(column-reverse, center, center);
+        margin: auto;
+        /*padding: 0 20px 0 20px;*/
+        >div{
+            margin: auto;
+        }
+    }
+
+    .contact-header{h1{font-size: $header3;}}
+
+    .contact-info{
+        margin-top: -250px;
+        margin-bottom: 150px;
+        p{font-size: $text3;}
+    }
+
+    .form-basic{width: 300px;}
+    ::placeholder{font-size: $text3;}
+    iframe{width: 80%;}
 }
