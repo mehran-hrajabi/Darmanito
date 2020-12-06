@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mehran-hrajabi/Darmanito/issues"
   },
-  "homepage": "https://github.com/mehran-hrajabi/Darmanito#readme"
+  "homepage": "https://github.com/mehran-hrajabi/Darmanito#readme",
+  "dependencies": {
+    "sass": "^1.30.0"
+  }
 }
